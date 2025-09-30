@@ -43,15 +43,23 @@ All colors MUST be HSL.
     --beige: 60 25% 95%;
     --beige-dark: 60 20% 90%;
     --warm-beige: 60 33% 97%;
-    
+
     /* Gradients */
-    --gradient-hero: linear-gradient(135deg, hsl(var(--warm-beige)), hsl(var(--beige)));
-    --gradient-card: linear-gradient(180deg, hsl(var(--card)), hsl(var(--beige)));
-    
+    --gradient-hero: linear-gradient(
+      135deg,
+      hsl(var(--warm-beige)),
+      hsl(var(--beige))
+    );
+    --gradient-card: linear-gradient(
+      180deg,
+      hsl(var(--card)),
+      hsl(var(--beige))
+    );
+
     /* Shadows */
     --shadow-elegant: 0 10px 30px -10px hsl(var(--dark-red) / 0.2);
     --shadow-hover: 0 20px 40px -15px hsl(var(--dark-red) / 0.3);
-    
+
     /* Transitions */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     --transition-bounce: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
@@ -128,16 +136,16 @@ All colors MUST be HSL.
   .hero-section {
     @apply bg-gradient-to-br from-background to-card;
   }
-  
+
   .project-card {
     @apply transition-all duration-300 hover:scale-105;
     box-shadow: var(--shadow-elegant);
   }
-  
+
   .project-card:hover {
     box-shadow: var(--shadow-hover);
   }
-  
+
   .text-gradient {
     @apply bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent;
   }
