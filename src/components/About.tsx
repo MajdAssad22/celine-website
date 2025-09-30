@@ -21,21 +21,17 @@ const About = () => {
               </h2>
               <div className="space-y-4 text-lg text-muted-foreground leading-relaxed">
                 <p>
-                  With over 15 years of experience in interior design, I
-                  specialize in creating sophisticated spaces that reflect my
-                  clients' personalities while maintaining timeless elegance and
-                  functionality.
+                  Driven by a passion for interior design, Celine is dedicated
+                  to creating spaces that balance functionality with emotional
+                  depth. With a thoughtful approach that blends modern
+                  aesthetics with cultural and historical influences, Celine
+                  designs spaces that tell meaningful stories and resonate with
+                  the people who experience them.
                 </p>
                 <p>
-                  My design philosophy centers around the belief that every
-                  space should tell a story. I work closely with clients to
-                  understand their lifestyle, preferences, and dreams to create
-                  environments that truly feel like home.
-                </p>
-                <p>
-                  From luxury residential projects to boutique commercial
-                  spaces, I bring a refined aesthetic and meticulous attention
-                  to detail to every project.
+                  Continuously striving for growth, Celine is committed to
+                  learning, exploring, and expanding her creative horizons in
+                  order to deliver inspiring and relatable designs.
                 </p>
               </div>
             </div>
@@ -62,13 +58,13 @@ const About = () => {
             </div>
           </div>
 
-          <div className="relative">
+          <div className="relative w-fit mx-auto">
             <img
               src={designerPortrait}
               alt="Celine Assad - Interior Designer"
               className="mx-auto w-[400px] h-[450px] object-cover rounded-lg shadow-lg"
             />
-            <div className="absolute -bottom-6 -left-6 bg-dark-red text-primary-foreground px-6 py-4 rounded-xl">
+            <div className="absolute -bottom-6 -left-6 bg-dark-red text-primary-foreground mx-2 px-6 py-4 rounded-xl">
               <p className="font-serif text-lg font-semibold">
                 Award Winning Designer
               </p>
