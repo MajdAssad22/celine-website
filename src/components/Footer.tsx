@@ -8,7 +8,7 @@ const Footer = () => {
               Celine Assad
             </div>
             <p className="text-primary-foreground/80 text-sm">
-              Interior Designer • Oakville, CA
+              Interior Designer • Oakville, ON
             </p>
           </div>
 
