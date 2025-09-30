@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowDown } from "lucide-react";
-import backgroundMap from "@/assets/bg-map.png";
+import bgMap from "@/assets/bg-map.png";
 
 const Hero = () => {
   const scrollToProjects = () => {
@@ -13,17 +13,30 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="hero-section min-h-screen flex items-center pt-20"
+      className="min-h-screen flex items-center relative overflow-hidden container mx-auto"
     >
-      <div className="relative container mx-auto px-10">
+      <div
+        className="absolute right-0 top-0 h-full w-full lg:w-1/2 rotate-45 pointer-events-none select-none me-16 opacity-20 md:opacity-40 xl:opacity-90"
+        style={{
+          backgroundImage: `url(${bgMap})`,
+          backgroundRepeat: "no-repeat",
+          backgroundPosition: "right center",
+          backgroundSize: "contain",
+          zIndex: 0,
+        }}
+        aria-hidden="true"
+      />
+      <div className="relative z-10 px-0 sm:px-8 md:ms-16">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 items-center">
           <div className="space-y-8 grid-cols-1 lg:col-span-2">
             <div className="space-y-4">
               <h1 className="font-serif text-5xl md:text-6xl lg:text-6xl font-bold text-primary leading-tight">
                 Culture, Emotion, Comfort
-                <br /> Designed for daily life.
+                <span className="sm:inline hidden">
+                  <br /> Designed for daily life.
+                </span>
               </h1>
-              <p className="text-xl text-muted-foreground leading-relaxed max-w-xl">
+              <p className="text-md md:text-xl text-muted-foreground leading-relaxed max-w-xl">
                 Award-winning interior designer specializing in functional yet
                 beautifully designed interiors. Every project comes with a
                 unique story, thoughtfully brought to life with balance,
@@ -54,17 +67,17 @@ const Hero = () => {
             </div>
           </div>
         </div>
-
-        <div className="text-center mt-16">
-          <Button
-            variant="ghost"
-            size="icon"
-            className="animate-bounce text-accent hover:text-accent-foreground"
-            onClick={scrollToProjects}
-          >
-            <ArrowDown className="h-6 w-6" />
-          </Button>
-        </div>
+      </div>
+      <div className="absolute left-0 right-0 bottom-6 flex justify-center z-20">
+        <Button
+          variant="ghost"
+          size="icon"
+          className="animate-bounce text-accent hover:text-accent-foreground"
+          onClick={scrollToProjects}
+          aria-label="Scroll to projects"
+        >
+          <ArrowDown className="h-6 w-6" />
+        </Button>
       </div>
     </section>
   );
