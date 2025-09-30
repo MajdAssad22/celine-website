@@ -39,7 +39,7 @@ const ProjectsGallery = () => {
           <h2 className="font-serif text-4xl md:text-5xl font-bold text-primary mb-6">
             Featured Projects
           </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-md md:text-xl text-muted-foreground max-w-2xl mx-auto">
             Discover a curated selection of my most recent interior design
             projects, each crafted with attention to detail and timeless
             elegance.
@@ -50,16 +50,18 @@ const ProjectsGallery = () => {
           {projects.map((project) => (
             <div
               key={project.id}
-              className="project-card bg-background rounded-2xl overflow-hidden"
+              className="project-card cursor-pointer bg-background rounded-2xl overflow-hidden"
             >
               <div className="relative overflow-hidden">
                 <img
                   src={project.image}
                   alt={project.title}
-                  className="aspect-[5/4] object-cover"
+                  className="aspect-[5/4] object-cover pointer-events-none"
                 />
-                <div className="absolute top-4 left-4 bg-sage/90 text-sage-foreground px-3 py-1 rounded-full text-sm font-medium">
-                  {project.category}
+                <div className="absolute top-4 left-4">
+                  <span className="inline-block bg-primary/80 text-primary-foreground px-4 py-1 rounded-full text-xs font-semibold shadow-sm border border-accent">
+                    {project.category}
+                  </span>
                 </div>
               </div>
 
@@ -78,16 +80,13 @@ const ProjectsGallery = () => {
         </div>
 
         <div className="text-center mt-12">
-          <p className="text-muted-foreground mb-6">
-            Interested in seeing more of my work?
-          </p>
           <button
             onClick={() =>
               document
                 .querySelector("#contact")
                 ?.scrollIntoView({ behavior: "smooth" })
             }
-            className="text-accent hover:text-accent-foreground font-medium underline decoration-accent decoration-2 underline-offset-4 transition-colors duration-300"
+            className="text-accent hover:text-primary font-medium underline decoration-accent hover:decoration-primary decoration-2 underline-offset-8 transition-colors duration-300"
           >
             Let's discuss your project
           </button>
