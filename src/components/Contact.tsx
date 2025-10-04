@@ -38,7 +38,7 @@ const Contact = () => {
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="font-serif text-4xl md:text-5xl font-bold text-primary mb-6">
-            Let's Create Something Beautiful
+            Let's Create Something Meaningful
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
             Ready to transform your space? I'd love to hear about your project
