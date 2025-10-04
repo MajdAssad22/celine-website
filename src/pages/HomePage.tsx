@@ -6,7 +6,7 @@ import Services from "@/components/Services";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 
-const Index = () => {
+const HomePage = () => {
   return (
     <div className="min-h-screen">
       <Navigation />
@@ -20,4 +20,4 @@ const Index = () => {
   );
 };
 
-export default Index;
+export default HomePage;
