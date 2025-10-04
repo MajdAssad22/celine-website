@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ArrowDown } from "lucide-react";
 import bgMap from "@/assets/bg-map.png";
+import { motion } from "framer-motion";
 
 const Hero = () => {
   const scrollToProjects = () => {
@@ -26,7 +27,12 @@ const Hero = () => {
         }}
         aria-hidden="true"
       />
-      <div className="relative z-10 px-0 sm:px-8 md:ms-16">
+      <motion.div
+        className="relative z-10 px-0 sm:px-8 md:ms-16"
+        initial={{ opacity: 0, y: 40 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+      >
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 items-center">
           <div className="space-y-8 grid-cols-1 lg:col-span-2">
             <div className="space-y-4">
@@ -67,7 +73,7 @@ const Hero = () => {
             </div>
           </div>
         </div>
-      </div>
+      </motion.div>
       <div className="absolute left-0 right-0 bottom-6 flex justify-center z-20">
         <Button
           variant="ghost"
