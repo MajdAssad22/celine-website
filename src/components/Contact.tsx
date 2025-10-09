@@ -4,6 +4,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Mail, Phone, MapPin, Instagram, Linkedin } from "lucide-react";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
+import { contactInfo, socialLinks } from "@/data/contact";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -60,9 +61,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <p className="font-medium text-foreground">Email</p>
-                    <p className="text-muted-foreground">
-                      hello@celineassad.design
-                    </p>
+                    <p className="text-muted-foreground">{contactInfo.email}</p>
                   </div>
                 </div>
 
@@ -72,7 +71,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <p className="font-medium text-foreground">Phone</p>
-                    <p className="text-muted-foreground">+1 (555) 123-4567</p>
+                    <p className="text-muted-foreground">{contactInfo.phone}</p>
                   </div>
                 </div>
 
@@ -82,7 +81,9 @@ const Contact = () => {
                   </div>
                   <div>
                     <p className="font-medium text-foreground">Location</p>
-                    <p className="text-muted-foreground">San Francisco, CA</p>
+                    <p className="text-muted-foreground">
+                      {contactInfo.address}
+                    </p>
                   </div>
                 </div>
               </div>
@@ -94,13 +95,13 @@ const Contact = () => {
               </h4>
               <div className="flex space-x-4">
                 <a
-                  href="#"
+                  href={socialLinks.instagram}
                   className="flex items-center justify-center w-12 h-12 bg-sage/10 rounded-xl hover:bg-sage hover:text-sage-foreground transition-colors duration-300"
                 >
                   <Instagram className="h-5 w-5" />
                 </a>
                 <a
-                  href="#"
+                  href={socialLinks.linkedin}
                   className="flex items-center justify-center w-12 h-12 bg-sage/10 rounded-xl hover:bg-sage hover:text-sage-foreground transition-colors duration-300"
                 >
                   <Linkedin className="h-5 w-5" />
