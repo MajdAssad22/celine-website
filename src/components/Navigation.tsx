@@ -13,8 +13,6 @@ import {
 import { Link } from "react-router-dom";
 
 const Navigation = () => {
-  // const [isMenuOpen, setIsMenuOpen] = useState(false);
-  // const [isProjectsDropdownOpen, setIsProjectsDropdownOpen] = useState(false);
   const [mobileMenuView, setMobileMenuView] = useState<
     null | "main" | "projects"
   >(null);
@@ -55,14 +53,6 @@ const Navigation = () => {
       document.body.style.overflow = "unset";
     };
   }, [mobileMenuView]);
-
-  const navItems = [
-    { label: "Home", href: "#home" },
-    { label: "Projects", href: "#projects" },
-    { label: "About", href: "#about" },
-    { label: "Services", href: "#services" },
-    { label: "Contact", href: "#contact" },
-  ];
 
   const scrollToSection = (href: string) => {
     const element = document.querySelector(href);
