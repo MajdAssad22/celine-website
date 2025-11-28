@@ -1,5 +1,5 @@
 import React from "react";
-import { useParams, useNavigate, Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { projects } from "@/data/projects";
 import ProjectNavigation from "@/components/ProjectNavigation";
 import { ArrowLeft } from "lucide-react";
@@ -7,29 +7,26 @@ import { useEffect, useState } from "react";
 import ProjectDiagram from "@/components/ProjectDiagram";
 import research from "@/assets/story-and-stone/research/research.jpeg";
 import timeline from "@/assets/story-and-stone/research/timeline.jpeg";
+import ProjectHeader from "@/components/ProjectHeader";
+import ProjectFooter from "@/components/ProjectFooter";
 
-const ProjectPage = () => {
+const StoneAndStoryPage = () => {
   React.useEffect(() => {
     window.scrollTo({ top: 0, behavior: "auto" });
   }, []);
-  const { slug } = useParams();
   const navigate = useNavigate();
-  const project = projects.find((p) => p.slug === slug);
-
-  if (!project) {
-    return (
-      <div className="container mx-auto py-20 text-center">
-        <h2 className="text-3xl font-bold mb-4">Project Not Found</h2>
-        <Link to="/" className="text-accent underline">
-          Back to Home
-        </Link>
-      </div>
-    );
-  }
+  const project = projects.find((p) => p.slug === "stone-and-story");
 
   // Scroll spy logic
   const [activeSection, setActiveSection] = useState("concept");
-  const sectionIds = ["concept", "research", "design", "materials", "renders"];
+  const sectionIds = [
+    "concept",
+    "research",
+    "design",
+    "materials",
+    "renders",
+    "end",
+  ];
 
   useEffect(() => {
     const handleScroll = () => {
@@ -56,24 +53,13 @@ const ProjectPage = () => {
         <div className="fixed top-3 left-3 z-50 flex justify-center p-2 rounded-full bg-background/95 backdrop-blur-sm shadow-md border border-border/50">
           <button
             type="button"
-            onClick={() => navigate(-1)}
+            onClick={() => navigate("/")}
             className="text-accent inline-block"
           >
             <ArrowLeft />
           </button>
         </div>
-        <div className="relative w-full h-[200px] overflow-hidden flex items-center justify-center">
-          <img
-            src={project.banner}
-            alt={project.title}
-            className="w-full h-full object-cover object-center pointer-events-none"
-            style={{ display: "block" }}
-          />
-          <div className="absolute inset-0 bg-black/50" />
-          <h1 className="absolute inset-0 flex items-center justify-center pb-10 text-white text-4xl md:text-5xl lg:text-6xl font-serif font-bold drop-shadow-xl text-center px-4">
-            {project.title}
-          </h1>
-        </div>
+        <ProjectHeader project={project} />
       </section>
 
       <ProjectNavigation
@@ -85,7 +71,7 @@ const ProjectPage = () => {
           }
         }}
       />
-      <div className="container mx-auto px-6 space-y-20">
+      <div className="container mx-auto px-6">
         <div
           id="concept"
           className="md:grid grid-cols-1 md:grid-cols-2 justify-items-end gap-8 pt-16"
@@ -94,7 +80,23 @@ const ProjectPage = () => {
             <h2 className="text-2xl font-bold font-serif mb-4">
               Concept Explanation
             </h2>
-            <p>{project.conceptExplanation}</p>
+            <p>
+              Stone & Story explores how heritage and history can be integrated
+              into everyday life. As designers from Nazareth, we observed a gap
+              in local awareness of our Arab culture and heritage, as most
+              historical sites prioritize tourists over residents. We selected
+              an Ancient Roman Bathhouse as the site for our intervention. Our
+              proposal reimagines it as a public library, preserving the
+              bathhouse’s original stone structure while introducing new
+              elements. This approach balances respect for historical
+              authenticity with the practical needs of the present. The result
+              is more than a library; it is a living cultural hub. The design
+              transforms the bathhouse into a space where locals encounter their
+              history in daily life, blending memory and community. Emphasizing
+              accessibility, interaction, and continuity, the project ensures
+              that history is not just observed but actively experienced,
+              fostering a dialogue between past and future generations.
+            </p>
           </div>
           <div className="text-center">
             <ProjectDiagram concepts={project.concepts} />
@@ -102,8 +104,6 @@ const ProjectPage = () => {
         </div>
         <div id="research" className="pt-10">
           <h2 className="text-2xl font-bold font-serif mb-4">Research</h2>
-          {/* <p>{project.research}</p> */}
-
           <div className="md:grid md:grid-cols-2 justify-items-end gap-4 space-y-10 md:space-y-0">
             <div>
               <p>
@@ -135,20 +135,23 @@ const ProjectPage = () => {
                 locals with the city’s rich historical layers.
               </p>
             </div>
+
             <img
               src={research}
-              className="md:w-3/5 h-auto object-contain aspect-square w-full"
-              alt=""
+              className="md:w-4/5 h-auto object-contain w-full"
+              alt="research image"
             />
           </div>
 
-          <img src={timeline} className="w-full h-auto object-contain mt-10" />
+          <img
+            src={timeline}
+            className="w-4/5 h-auto mx-auto object-contain pt-10"
+          />
         </div>
         <div id="design" className="pt-10">
-          <h2 className="text-2xl font-bold font-serif mb-4">Design</h2>
-          {/* <p>{project.design}</p> */}
           <div className="md:grid md:grid-cols-2 gap-4 space-y-10 md:space-y-0">
             <div>
+              <h2 className="text-2xl font-bold font-serif mb-4">Design</h2>
               <p>
                 We studied the Roman bathhouse’s original function, layout, and
                 sequence of spaces from the changing room through cold,
@@ -173,50 +176,50 @@ const ProjectPage = () => {
               className="oject-cover rounded-lg mx-auto"
             />
           </div>
-          <div className="grid grid-cols-7 mt-10 gap-4">
-            <div>
+          <div className="grid lg:grid-cols-7 max-w-5xl mx-auto md:grid-cols-4 grid-cols-2 mt-10 gap-4">
+            <div className="mx-auto">
               <img
                 src={project.designs[1]}
-                className="w-48 h-48 object-cover mx-auto"
+                className="w-48 h-48 object-cover"
               />
               <p className="text-center">1890</p>
             </div>
-            <div>
+            <div className="mx-auto">
               <img
                 src={project.designs[2]}
-                className="w-48 h-48 object-cover mx-auto"
+                className="w-48 h-48 object-cover"
               />
               <p className="text-center">1900</p>
             </div>
-            <div>
+            <div className="mx-auto">
               <img
                 src={project.designs[3]}
-                className="w-48 h-48 object-cover mx-auto"
+                className="w-48 h-48 object-cover"
               />
               <p className="text-center">1900</p>
             </div>
-            <div>
+            <div className="mx-auto">
               <img
                 src={project.designs[4]}
                 className="w-48 h-48 object-cover"
               />
               <p className="text-center">1910</p>
             </div>
-            <div>
+            <div className="mx-auto">
               <img
                 src={project.designs[5]}
                 className="w-48 h-48 object-cover"
               />
               <p className="text-center">1910</p>
             </div>
-            <div>
+            <div className="mx-auto">
               <img
                 src={project.designs[6]}
                 className="w-48 h-48 object-cover"
               />
               <p className="text-center">1929</p>
             </div>
-            <div>
+            <div className="mx-auto">
               <img
                 src={project.designs[7]}
                 className="w-48 h-48 object-cover"
@@ -224,47 +227,109 @@ const ProjectPage = () => {
               <p className="text-center">1940</p>
             </div>
           </div>
-          <p>
-            <br /> <br />
-            The design starts with a coffee shop, preserved as part of locals’
-            daily routine, and transitions through a mini museum into the
-            library. The library moves from open communal areas to intimate
-            underground zones, culminating in the hypocaust chamber, which
-            houses historical artifacts and rare books, merging personal memory
-            with collective history. Functions are arranged to follow the
-            bathhouse’s original spatial sequence from the cold (public coffee
-            shop), through the museum, to the hot (library), enhancing
-            circulation and experience. The main entrance is reused, other
-            entries closed, and original internal connections between rooms
-            restored. In addition, there is also a venue space with its own
-            entrance designated for events, it is separated from the rest of the
-            spaces, since it is not considered one of the main rooms in the
-            bathhouse, so we gave it an occasional function. There are two ways
-            to approach the underground space: the first using a spiral
-            staircase and the second using the back vault and into the old oven
-            space. It was important for us to give the people a chance to get
-            direct contact/ friction with underground archaeology and get the
-            full experience. The underground path functions both as an
-            experiential route and an archive, with shelves integrated between
-            the hypocaust columns to display and store special books and maps
-            within reach. Furniture was designed to fit seamlessly within curved
-            stone walls, columns, and niches, centered to maintain circulation,
-            while contrasting the stone with modern, lightweight pieces
-            featuring curved edges and thin black metal. Black metal is also
-            used in staircases and the building’s support system. Floor levels
-            were adjusted to create the path, and a steel beam and column grid
-            was carefully aligned with the hypocaust to avoid disturbing the
-            archaeology or circulation. In the hot room, we created a unique
-            experience by adding a central opening to reveal the underground
-            path and hypocaust system. The floating floor includes a gap to
-            preserve the stone walls and emphasize the connection between upper
-            and lower levels, enhanced by a light fixture radiating in both
-            directions. Light plays a key role in the spatial experience: bright
-            lighting in the coffee shop conveys openness, gradually dimming into
-            softer, intimate lighting deeper inside. The intervention respects
-            the exterior, keeping facade openings’ dimensions and grid ratios
-            consistent with the upper floors.
-          </p>
+
+          <div className="md:grid md:grid-cols-2 gap-4 space-y-10 mt-10 md:space-y-0">
+            <div>
+              <p>
+                The design starts with a coffee shop, preserved as part of
+                locals’ daily routine, and transitions through a mini museum
+                into the library. The library moves from open communal areas to
+                intimate underground zones, culminating in the hypocaust
+                chamber, which houses historical artifacts and rare books,
+                merging personal memory with collective history. Functions are
+                arranged to follow the bathhouse’s original spatial sequence
+                from the cold (public coffee shop), through lukewarm (the
+                museum), to the hot (library), enhancing circulation and
+                experience.
+                <br />
+                The main entrance is reused, other entries closed, and original
+                internal connections between rooms restored. In addition, there
+                is also a venue space with its own entrance designated for
+                events, it is separated from the rest of the spaces, since it is
+                not considered one of the main rooms in the bathhouse, so we
+                gave it an occasional function.
+              </p>
+            </div>
+            <div className="grid grid-cols-3 gap-4">
+              <div className="mx-auto">
+                <img
+                  src={project.designs[9]}
+                  className="object-cover rounded-lg"
+                />
+                <p className="text-sm">Circulation & functions</p>
+              </div>
+              <div>
+                <img
+                  src={project.designs[8]}
+                  className="object-cover rounded-lg"
+                />
+              </div>
+              <div>
+                <img
+                  src={project.designs[10]}
+                  className="object-cover rounded-lg"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-2 mx-auto mt-10">
+            <div className="flex flex-col gap-2 items-end">
+              <img
+                src={project.designs[12]}
+                className="h-64 w-10/12 object-cover"
+              />
+              <img
+                src={project.designs[11]}
+                className="h-64 w-10/12 object-cover"
+              />
+            </div>
+            <img
+              src={project.designs[13]}
+              className="w-10/12 object-cover rounded-lg"
+            />
+          </div>
+
+          <div className="grid grid-cols-2 gap-10 mt-10">
+            <p>
+              There are two ways to approach the underground space: the first
+              using a spiral staircase and the second using the back vault and
+              into the old oven space. It was important for us to give the
+              people a chance to get direct contact / friction with underground
+              archaeology and get the full experience. The underground path
+              functions both as an experiential route and an archive, with
+              shelves integrated between the hypocaust columns to display and
+              store special books and maps within reach. <br />
+              Furniture was designed to fit seamlessly within curved stone
+              walls, columns, and niches, centered to maintain circulation,
+              while contrasting the stone with modern, lightweight pieces
+              featuring curved edges and thin black metal. Black metal is also
+              used in staircases and the building’s support system.
+            </p>
+            <p>
+              Floor levels were adjusted to create the path, and a steel beam
+              and column grid was carefully aligned with the hypocaust to avoid
+              disturbing the archaeology or circulation. In the hot room, we
+              created a unique experience by adding a central opening to reveal
+              the underground path and hypocaust system. The floating floor
+              includes a gap to preserve the stone walls and emphasize the
+              connection between upper and lower levels, enhanced by a light
+              fixture radiating in both directions. Light plays a key role in
+              the spatial experience: bright lighting in the coffee shop conveys
+              openness, gradually dimming into softer, intimate lighting deeper
+              inside. The intervention respects the exterior, keeping facade
+              openings’ dimensions and grid ratios consistent with the upper
+              floors.
+            </p>
+          </div>
+          <div className="mt-10 flex flex-col justify-center max-w-5xl mx-auto">
+            <img src={project.designs[14]} className="rounded-lg" />
+            <img src={project.designs[15]} className="rounded-lg" />
+            <div className="grid grid-cols-2  mt-4">
+              <img src={project.designs[16]} className="rounded-lg" />
+              <img src={project.designs[17]} className="rounded-lg" />
+            </div>
+          </div>
         </div>
         <div id="materials" className="pt-10">
           <h2 className="text-2xl font-bold font-serif mb-10">Materials</h2>
@@ -281,51 +346,23 @@ const ProjectPage = () => {
         </div>
         <div id="renders" className="pt-10">
           <h2 className="text-2xl font-bold font-serif mb-4">Renders</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             {project.renders.map((render, idx) => (
               <img
                 key={idx}
                 src={render}
                 alt={`${project.title} Render ${idx + 1}`}
-                className="w-full h-auto object-cover rounded-lg"
+                className="w-full h-[500px] object-cover rounded-lg"
               />
             ))}
           </div>
         </div>
+        <div id="end">
+          <ProjectFooter currentSlug={project.slug} />
+        </div>
       </div>
     </div>
-    // <section className="py-20 bg-card min-h-screen">
-    //   <div className="container mx-auto px-6 max-w-2xl">
-    //     <button
-    //       type="button"
-    //       onClick={() => navigate(-1)}
-    //       className="text-accent underline mb-8 inline-block"
-    //     >
-    //       ← Back
-    //     </button>
-    //     <div className="bg-background rounded-2xl overflow-hidden shadow-lg">
-    //       <img
-    //         src={project.image}
-    //         alt={project.title}
-    //         className="w-full object-cover aspect-[5/4]"
-    //       />
-    //       <div className="p-8">
-    //         <span className="inline-block bg-primary/80 text-primary-foreground px-4 py-1 rounded-full text-xs font-semibold mb-4">
-    //           {project.category}
-    //         </span>
-    //         <h1 className="font-serif text-4xl font-bold text-primary mb-4">
-    //           {project.title}
-    //         </h1>
-    //         <ul className="list-disc list-inside text-muted-foreground space-y-2">
-    //           {project.points.map((point, idx) => (
-    //             <li key={idx}>{point}</li>
-    //           ))}
-    //         </ul>
-    //       </div>
-    //     </div>
-    //   </div>
-    // </section>
   );
 };
 
-export default ProjectPage;
+export default StoneAndStoryPage;
