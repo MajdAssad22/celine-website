@@ -18,10 +18,13 @@ const ProjectNavigation: React.FC<ProjectNavMenuProps> = ({
   onSectionClick,
   activeSection,
 }) => {
-  const activeIdx = sections.findIndex((s) => s.id === activeSection);
+  let activeIdx = sections.findIndex((s) => s.id === activeSection);
+  if (activeSection === "end") {
+    activeIdx = sections.length + 1;
+  }
   console.log("Active Section:", activeSection, "Active Index:", activeIdx);
   return (
-    <nav className="sticky min-h-14 mt-5 md:min-h-16 px-10 md:px-16 rounded-full mx-auto me-0 sm:mx-auto right-0 top-2 bg-background/95 backdrop-blur-sm shadow-md border border-border/50">
+    <nav className="sticky z-50 min-h-14 mt-5 md:min-h-16 px-10 md:px-16 rounded-full mx-auto me-0 sm:mx-auto right-0 top-2 bg-background/95 backdrop-blur-sm shadow-md border border-border/50">
       <div className="flex items-center justify-center">
         {sections.map((section, idx) => {
           const isActive = activeSection === section.id;

@@ -44,9 +44,9 @@ const Hero = () => {
               </h1>
               <p className="text-md md:text-xl text-muted-foreground leading-relaxed max-w-xl">
                 Award-winning interior designer specializing in functional yet
-                beautifully designed interiors. Every project comes with a
-                unique story, thoughtfully brought to life with balance,
-                emotion, and style.
+                beautifully designed spaces. Every project comes with a unique
+                story, thoughtfully brought to life with balance, emotion, and
+                style.
               </p>
             </div>
 

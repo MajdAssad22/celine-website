@@ -1,6 +1,7 @@
 import { projects } from "@/data/projects";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+import { Award } from "lucide-react";
 
 const ProjectsGallery = () => {
   return (
@@ -13,11 +14,6 @@ const ProjectsGallery = () => {
           <h2 className="font-serif text-4xl md:text-5xl font-bold text-primary mb-6">
             Featured Projects
           </h2>
-          <p className="text-md md:text-xl text-muted-foreground max-w-2xl mx-auto">
-            Discover a curated selection of my most recent interior design
-            projects, each crafted with attention to detail and timeless
-            elegance.
-          </p>
         </div>
 
         <motion.div
@@ -56,6 +52,12 @@ const ProjectsGallery = () => {
                     alt={project.title}
                     className="aspect-[5/4] object-cover pointer-events-none"
                   />
+                  {project.awardWinning ? (
+                    <Award
+                      className="absolute text-primary w-10 h-10 top-4 right-4"
+                      strokeWidth={1.5}
+                    />
+                  ) : null}
                   <div className="absolute top-4 left-4">
                     <span className="inline-block bg-primary/80 text-primary-foreground px-4 py-1 rounded-full text-xs font-semibold shadow-sm border border-accent">
                       {project.category}
