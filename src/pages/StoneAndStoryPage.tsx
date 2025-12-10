@@ -25,6 +25,7 @@ const StoneAndStoryPage = () => {
     "design",
     "materials",
     "renders",
+    "renders",
     "end",
   ];
 
@@ -273,24 +274,24 @@ const StoneAndStoryPage = () => {
             </div>
           </div>
 
-          <div className="grid grid-cols-2 mx-auto mt-10">
+          <div className="grid grid-cols-2 mx-auto mt-10 items-center">
             <div className="flex flex-col gap-2 items-end">
               <img
                 src={project.designs[12]}
-                className="h-64 w-10/12 object-cover"
+                className="w-11/12 aspect-[2/1] object-cover"
               />
               <img
                 src={project.designs[11]}
-                className="h-64 w-10/12 object-cover"
+                className="w-11/12 aspect-[2/1] object-cover"
               />
             </div>
             <img
               src={project.designs[13]}
-              className="w-10/12 object-cover rounded-lg"
+              className="w-11/12 object-cover rounded-lg"
             />
           </div>
 
-          <div className="grid grid-cols-2 gap-10 mt-10">
+          <div className="grid md:grid-cols-2 gap-10 mt-10">
             <p>
               There are two ways to approach the underground space: the first
               using a spiral staircase and the second using the back vault and
@@ -325,7 +326,7 @@ const StoneAndStoryPage = () => {
           <div className="mt-10 flex flex-col justify-center max-w-5xl mx-auto">
             <img src={project.designs[14]} className="rounded-lg" />
             <img src={project.designs[15]} className="rounded-lg" />
-            <div className="grid grid-cols-2  mt-4">
+            <div className="grid grid-cols-2 mt-4">
               <img src={project.designs[16]} className="rounded-lg" />
               <img src={project.designs[17]} className="rounded-lg" />
             </div>
@@ -346,18 +347,78 @@ const StoneAndStoryPage = () => {
         </div>
         <div id="renders" className="pt-10">
           <h2 className="text-2xl font-bold font-serif mb-4">Renders</h2>
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-            {project.renders.map((render, idx) => (
-              <img
-                key={idx}
-                src={render}
-                alt={`${project.title} Render ${idx + 1}`}
-                className="w-full h-[500px] object-cover rounded-lg"
-              />
-            ))}
+          <div className="space-y-4 mb-10">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div className="space-y-2">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-3 md:gap-4">
+                  <img
+                    src={project.renders[0]}
+                    alt={`${project.title} Render 1`}
+                    className="w-full h-[500px] sm:h-48 md:h-[500px] object-cover rounded-lg"
+                  />
+                  <img
+                    src={project.renders[1]}
+                    alt={`${project.title} Render 2`}
+                    className="w-full h-[500px] sm:h-48 md:h-[500px] object-cover rounded-lg"
+                  />
+                </div>
+                <h3 className="text-base sm:text-lg font-semibold text-center">
+                  Ground Floor
+                </h3>
+              </div>
+
+              <div className="space-y-2">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-3 md:gap-4">
+                  <img
+                    src={project.renders[2]}
+                    alt={`${project.title} Render 3`}
+                    className="w-full h-[500px] sm:h-48 md:h-[500px] object-cover rounded-lg"
+                  />
+                  <img
+                    src={project.renders[3]}
+                    alt={`${project.title} Render 4`}
+                    className="w-full h-[500px] sm:h-48 md:h-[500px] object-cover rounded-lg"
+                  />
+                </div>
+                <h3 className="text-base sm:text-lg font-semibold text-center">
+                  Underground Floor
+                </h3>
+              </div>
+            </div>
+          </div>
+
+          <h2 className="text-2xl font-bold font-serif mb-4">Physical Model</h2>
+
+          <img
+            src={project.renders[12]}
+            alt={`${project.title} Render 4`}
+            className="w-full object-cover rounded-lg"
+          />
+          <div className="py-10 flex justify-center">
+            <a
+              href="/story-and-stone-detailed.pdf"
+              download="story-and-stone-detailed.pdf"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-accent text-white font-semibold rounded-lg hover:bg-accent/90 transition-colors shadow-md"
+            >
+              <svg
+                className="w-5 h-5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"
+                />
+              </svg>
+              Download Detailed Project
+            </a>
           </div>
         </div>
-        <div id="end">
+
+        <div className="pt-16" id="end">
           <ProjectFooter currentSlug={project.slug} />
         </div>
       </div>

@@ -7,6 +7,15 @@ import storyAndStoneRender1 from "@/assets/story-and-stone/renders/story-and-sto
 import storyAndStoneRender2 from "@/assets/story-and-stone/renders/story-and-stone-render-2.jpeg";
 import storyAndStoneRender3 from "@/assets/story-and-stone/renders/story-and-stone-render-3.jpeg";
 import storyAndStoneRender4 from "@/assets/story-and-stone/renders/story-and-stone-render-4.jpeg";
+import storyAndStoneRender5 from "@/assets/story-and-stone/renders/story-and-stone-render-5.jpeg";
+import storyAndStoneRender6 from "@/assets/story-and-stone/renders/story-and-stone-render-6.jpeg";
+import storyAndStoneRender7 from "@/assets/story-and-stone/renders/story-and-stone-render-7.jpeg";
+import storyAndStoneRender8 from "@/assets/story-and-stone/renders/story-and-stone-render-8.jpeg";
+import storyAndStoneRender9 from "@/assets/story-and-stone/renders/story-and-stone-render-9.jpeg";
+import storyAndStoneRender10 from "@/assets/story-and-stone/renders/story-and-stone-render-10.jpeg";
+import storyAndStoneRender11 from "@/assets/story-and-stone/renders/story-and-stone-render-11.jpeg";
+import storyAndStoneRender12 from "@/assets/story-and-stone/renders/story-and-stone-render-12.jpeg";
+import storyAndStoneRender13 from "@/assets/story-and-stone/renders/story-and-stone-render-13.jpeg";
 import storyAndStoneMaterial1 from "@/assets/story-and-stone/materials/story-and-stone-material-1.png";
 import storyAndStoneMaterial2 from "@/assets/story-and-stone/materials/story-and-stone-material-2.png";
 import storyAndStoneMaterial3 from "@/assets/story-and-stone/materials/story-and-stone-material-3.png";
@@ -22,11 +31,11 @@ import storyAndStoneDesign8 from "@/assets/story-and-stone/designs/story-and-sto
 import storyAndStoneDesign9 from "@/assets/story-and-stone/designs/story-and-stone-design-9.jpeg";
 import storyAndStoneDesign10 from "@/assets/story-and-stone/designs/story-and-stone-design-10.jpeg";
 import storyAndStoneDesign11 from "@/assets/story-and-stone/designs/story-and-stone-design-11.jpeg";
-import storyAndStoneDesign12 from "@/assets/story-and-stone/designs/story-and-stone-design-12.jpeg";
-import storyAndStoneDesign13 from "@/assets/story-and-stone/designs/story-and-stone-design-13.jpeg";
+import storyAndStoneDesign12 from "@/assets/story-and-stone/designs/story-and-stone-design-12.jpg";
+import storyAndStoneDesign13 from "@/assets/story-and-stone/designs/story-and-stone-design-13.jpg";
 import storyAndStoneDesign14 from "@/assets/story-and-stone/designs/story-and-stone-design-14.jpeg";
-import storyAndStoneDesign15 from "@/assets/story-and-stone/designs/story-and-stone-design-15.jpeg";
-import storyAndStoneDesign16 from "@/assets/story-and-stone/designs/story-and-stone-design-16.jpeg";
+import storyAndStoneDesign15 from "@/assets/story-and-stone/designs/story-and-stone-design-15.jpg";
+import storyAndStoneDesign16 from "@/assets/story-and-stone/designs/story-and-stone-design-16.jpg";
 import storyAndStoneDesign17 from "@/assets/story-and-stone/designs/story-and-stone-design-17.jpeg";
 import storyAndStoneDesign18 from "@/assets/story-and-stone/designs/story-and-stone-design-18.jpeg";
 
@@ -57,6 +66,15 @@ export const projects = [
       storyAndStoneRender2,
       storyAndStoneRender3,
       storyAndStoneRender4,
+      storyAndStoneRender5,
+      storyAndStoneRender6,
+      storyAndStoneRender7,
+      storyAndStoneRender8,
+      storyAndStoneRender9,
+      storyAndStoneRender10,
+      storyAndStoneRender11,
+      storyAndStoneRender12,
+      storyAndStoneRender13,
     ],
     materials: [
       storyAndStoneMaterial1,
