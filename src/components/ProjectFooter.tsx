@@ -51,7 +51,7 @@ const ProjectFooter: React.FC<ProjectFooterProps> = ({
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {picks.map((p) => (
             <Link
-              to={`/project/${p.slug}`}
+              to={`/${p.slug}`}
               key={p.id}
               className="relative overflow-hidden rounded-lg hover:scale-[1.02] transform transition-all duration-200"
             >

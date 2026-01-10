@@ -19,12 +19,9 @@ const App = () => (
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route
-            path="/project/stone-and-story"
-            element={<StoneAndStoryPage />}
-          />
-          <Route path="/project/hygeia" element={<HygeiaPage />} />
-          <Route path="/project/ventusphere" element={<VentuspherePage />} />
+          <Route path="/stone-and-story" element={<StoneAndStoryPage />} />
+          <Route path="/hygeia" element={<HygeiaPage />} />
+          <Route path="/ventusphere" element={<VentuspherePage />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

@@ -98,7 +98,7 @@ const Navigation = () => {
                       <li key={project.id}>
                         <NavigationMenuLink asChild>
                           <Link
-                            to={`/project/${project.slug}`}
+                            to={`/${project.slug}`}
                             className="block px-4 py-2 hover:bg-primary/5 text-foreground"
                           >
                             {project.title}
@@ -216,7 +216,7 @@ const Navigation = () => {
                   {projects.map((project) => (
                     <Link
                       key={project.id}
-                      to={`/project/${project.slug ?? project.id}`}
+                      to={`/${project.slug ?? project.id}`}
                       className="w-full text-left text-foreground hover:text-accent transition-colors duration-300 font-bold"
                       onClick={() => {
                         setMobileMenuView("main");

@@ -43,7 +43,7 @@ const ProjectsGallery = () => {
               }}
             >
               <Link
-                to={`/project/${project.slug}`}
+                to={`/${project.slug}`}
                 className="project-card cursor-pointer bg-background rounded-2xl overflow-hidden block hover:shadow-lg transition-all duration-200"
               >
                 <div className="relative overflow-hidden">
