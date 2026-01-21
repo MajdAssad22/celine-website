@@ -12,6 +12,7 @@ const sections = [
   { label: "Design", id: "design" },
   { label: "Materials", id: "materials" },
   { label: "Renders", id: "renders" },
+  { label: "Model", id: "model" },
 ];
 
 const ProjectNavigation: React.FC<ProjectNavMenuProps> = ({
