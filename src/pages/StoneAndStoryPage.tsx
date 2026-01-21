@@ -25,7 +25,7 @@ const StoneAndStoryPage = () => {
     "design",
     "materials",
     "renders",
-    "renders",
+    "model",
     "end",
   ];
 
@@ -386,14 +386,15 @@ const StoneAndStoryPage = () => {
               </div>
             </div>
           </div>
-
+        </div>
+        <div id="model" className="pt-10">
           <h2 className="text-2xl font-bold font-serif mb-4">Physical Model</h2>
-
           <img
-            src={project.renders[12]}
-            alt={`${project.title} Render 4`}
+            src={project.physicalModels[0]}
+            alt={`${project.title} Physical Model 1`}
             className="w-full object-cover rounded-lg"
           />
+
           <div className="py-10 flex justify-center">
             <a
               href="/story-and-stone-detailed.pdf"
@@ -417,7 +418,6 @@ const StoneAndStoryPage = () => {
             </a>
           </div>
         </div>
-
         <div className="pt-16" id="end">
           <ProjectFooter currentSlug={project.slug} />
         </div>

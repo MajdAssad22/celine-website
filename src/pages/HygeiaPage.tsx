@@ -25,6 +25,7 @@ const HygeiaPage = () => {
     "design",
     "materials",
     "renders",
+    "model",
     "end",
   ];
 
@@ -271,6 +272,19 @@ const HygeiaPage = () => {
                 key={idx}
                 src={render}
                 alt={`${project.title} Render ${idx + 1}`}
+                className="w-full h-[500px] object-cover rounded-lg"
+              />
+            ))}
+          </div>
+        </div>
+        <div id="model" className="pt-10">
+          <h2 className="text-2xl font-bold font-serif mb-4">Physical Model</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {project.physicalModels.map((model, idx) => (
+              <img
+                key={idx}
+                src={model}
+                alt={`${project.title} Physical Model ${idx + 1}`}
                 className="w-full h-[500px] object-cover rounded-lg"
               />
             ))}
