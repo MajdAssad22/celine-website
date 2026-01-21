@@ -73,29 +73,6 @@ const Services = () => {
             </div>
           ))}
         </div>
-
-        <div className="text-center mt-16">
-          <div className="bg-background p-8 rounded-2xl project-card max-w-4xl mx-auto">
-            <h3 className="font-serif text-2xl font-semibold text-primary mb-4">
-              Ready to Transform Your Space?
-            </h3>
-            <p className="text-muted-foreground mb-6 text-lg">
-              Let's schedule a consultation to discuss your project and explore
-              how we can create a space that perfectly reflects your style and
-              meets your needs.
-            </p>
-            <button
-              onClick={() =>
-                document
-                  .querySelector("#contact")
-                  ?.scrollIntoView({ behavior: "smooth" })
-              }
-              className="bg-sage hover:bg-sage-dark text-sage-foreground px-8 py-3 rounded-xl font-medium transition-colors duration-300"
-            >
-              Schedule Consultation
-            </button>
-          </div>
-        </div>
       </div>
     </section>
   );
