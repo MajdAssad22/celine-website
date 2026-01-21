@@ -24,6 +24,7 @@ const VentuspherePage = () => {
     "design",
     "materials",
     "renders",
+    "model",
     "end",
   ];
 
@@ -99,28 +100,26 @@ const VentuspherePage = () => {
           <div className="lg:grid lg:grid-cols-2 justify-items-end gap-8 space-y-10 lg:space-y-0">
             <div>
               <p>
-                Since airflow and its intensity can only be experienced, most of
-                the research relied on building 3D models to test which
-                configurations produced the strongest ventilation before and
-                after interior divisions. This study guided us with every
-                decision, from the ceiling design & wall placement to the
-                arrangement and the design of the furniture, integrating their
-                personal requests into each space. Due to the client's requests,
-                we started by analyzing air movement around the site,
-                identifying and focusing on the main façade. As part of our
-                research, we created a series of models with identical sizes and
-                openings, varying only the ceiling design to determine which one
-                produced the optimal air flow intensity. Then we continued
-                examining the interior walls, adjusting the spatial divisions
-                each time until we achieved a layout that met both clients’
-                requirements and ensured the best ventilation. All the design
-                decisions for the apartment were made to enhance air
-                circulation, from the ceiling, walls, windows, and doors to the
-                furniture, handles, and even the choice of breathable fabrics.
+                Because airflow and its intensity can only be understood through
+                physical experience, our research relied heavily on 3D models to
+                test ventilation performance before and after introducing
+                interior divisions. This process informed every design decision
+                from ceiling geometry and wall placement to furniture
+                configuration while integrating the clients’ specific requests.
+                We began by analyzing wind patterns around the site, focusing on
+                the main façade. From there, we tested a series of models with
+                identical dimensions and openings, altering only the ceiling
+                design to identify the configuration that delivered the
+                strongest airflow. We then refined the interior partitions,
+                iterating multiple layouts until we achieved both optimal
+                ventilation and full alignment with the clients’ needs.
+                Ultimately, every element of the apartment—from the ceiling,
+                walls, and openings to the furniture details and choice of
+                breathable materials—was designed to enhance air circulation.
               </p>
             </div>
 
-            <div className="flex justify-center items-center">
+            <div className="flex justify-center">
               <img
                 src={research}
                 className="object-contain h-full w-5/6"
@@ -130,67 +129,181 @@ const VentuspherePage = () => {
           </div>
         </div>
         <div id="design" className="pt-10">
-          <div className="md:grid md:grid-cols-2 gap-4 space-y-10 md:space-y-0">
-            <div>
-              <h2 className="text-2xl font-bold font-serif mb-4">Design</h2>
+          <h2 className="text-2xl font-bold font-serif mb-4">Design</h2>
+          <div className="grid grid-cols-12 mb-8 justify-items-end gap-8 space-y-10 lg:space-y-0">
+            <div className="col-span-6">
               <p>
-                Based on the results of our research, we determined which façade
-                to focus on, and we decided to make it diagonal to draw air into
-                the apartment, directing airflow inside, where it then splits
-                into two main paths. One goes through the living room, then into
-                the “Bedroom N”, and the other through the kitchen, continuing
-                into the “workspace Y”. For the round windows, we drew
-                inspiration from musical instruments like the flute and
-                saxophone, which, like the windows, function through the
-                movement of air. Although all the windows are rounded, they vary
-                in size: larger openings are used for shared spaces, while
-                smaller ones suit more private areas. It's important to mention
-                that the windows are Pivot windows, which means they rotate
-                around a central axis, either horizontally or vertically. This
-                design allows for flexible ventilation control & smooth airflow.
-                Additionally, the placement of each window determines its
-                orientation, whether horizontal or vertical. For the doors, we
-                used pocket doors, so if the door closed or opened, it wouldn't
-                affect the air path and still allow ventilation through the
-                other spaces. We drew inspiration from ship doors and airplanes,
-                continuing our design language, which is reflected in the
-                kitchen cabinets and handles. Furniture also plays a role in
-                supporting air circulation. For instance, the closets are
-                aligned with the tilted walls to avoid obstructing airflow and
-                instead help guide it. Similarly, just as the patio was shaped
-                to split and channel the air, the living room sofas were
-                arranged and designed to direct and distribute airflow toward
-                areas with weaker ventilation. It was important to us to choose
-                breathable fabrics and fabrics that don’t catch the smell of
-                smoke. We tested a couple of fabrics with different thicknesses
-                and textures, and sewing patterns. For the lighting, we drew
-                inspiration from the continuous light strips found in airplanes
-                and buses, adapting the idea to suit the apartment’s design, the
-                custom ceiling geometry, and the primary airflow direction. The
-                result is two linear light strips positioned along the main wind
-                paths and aligned with the ceiling’s shifts. Zooming into the
-                patio, it functions not only as a wind divider but also as a
-                cozy, intimate space for one of the roommates who enjoys tending
-                to plants, some of which he uses for cooking and drinks. Placing
-                them here, near the kitchen, ensures convenient access. On the
-                side facing the living room, we introduced a custom design
-                element that allows occupants to both feel and visually perceive
-                the airflow. This object, mounted on the wall, rotates 360
-                degrees and is made from a thin aluminum sheet, lightweight,
-                easy to fold, highly responsive to movement, and consistent with
-                the project’s overall design language. The exterior walls are
-                constructed from exposed concrete, reflecting the clients’
-                preference for material honesty. To reinforce this approach
-                within our design concept, we applied a textured finish that
-                corresponds to the movement of the wind, resulting in a rougher,
-                more tactile surface rather than a smooth, polished one.
+                After determining our main façade, we decided to make it
+                diagonal to draw air into the apartment, directing airflow
+                inside, where it then splits into two main paths. One goes
+                through the living room, then into the “Bedroom N”, and the
+                other through the kitchen, continuing into the “workspace Y”.
+                <br />
+                We designed the whole apartment according to these two main air
+                paths, but it also depended on the client’s request and daily
+                activities such as “bedroom N” designed for the roommate who
+                spends most of his time in there working sleeping or just
+                enjoying his calm and private area, “workspace Y” is specially
+                made for the other roommate who spends most of his day either
+                there or working outside the apartment, we made the room and
+                furniture to fit his work, tools and the fact that he smokes to
+                encourage and direct the airflow.
               </p>
             </div>
+            <div className="col-span-6 row-span-2 w-5/6">
+              <img
+                src={project.designs[2]}
+                className="object-cover rounded-lg"
+              />
+            </div>
+            <div className="col-span-3">
+              <img
+                src={project.designs[1]}
+                className="object-cover rounded-lg"
+              />
+            </div>
+            <div className="col-span-3">
+              <img
+                src={project.designs[0]}
+                className="object-cover rounded-lg"
+              />
+            </div>
+          </div>
+
+          <div className="md:grid md:grid-cols-3 mt-10 space-y-10 md:space-y-0">
+            <div className="col-span-2">
+              <p>
+                For the round windows, we drew inspiration from musical
+                instruments like the flute and saxophone, which, like the
+                windows, function through the movement of air. Although all the
+                windows are rounded, they vary in size: larger openings are used
+                for shared spaces, while smaller ones suit more private areas.
+                It's important to mention that the windows are Pivot windows,
+                which means they rotate around a central axis, either
+                horizontally or vertically. This design allows for flexible
+                ventilation control & smooth airflow. Additionally, the
+                placement of each window determines its orientation, whether
+                horizontal or vertical.
+              </p>
+            </div>
+            <div className="flex flex-row justify-center px-10">
+              <div className="flex flex-col text-center w-2/3">
+                <img
+                  src={project.designs[3]}
+                  className="object-cover rounded-lg"
+                />
+                <p>Horizontal</p>
+              </div>
+              <div className="flex flex-col text-center w-2/3">
+                <img src={project.designs[4]} className="object-contain" />
+                <p>Vertical</p>
+              </div>
+            </div>
+          </div>
+          <div>
+            <img src={project.designs[5]} className="object-cover rounded-lg" />
+            <img src={project.designs[6]} className="object-cover rounded-lg" />
+          </div>
+          <div>
+            <p>
+              For the doors, we used pocket doors, so if the door closed or
+              opened, it wouldn't affect the air path and still allow
+              ventilation through the other spaces. We drew inspiration from
+              ship doors and airplanes, continuing our design language, which is
+              reflected in the kitchen cabinets and handles. Furniture also
+              plays a role in supporting air circulation. For instance, the
+              closets are aligned with the tilted walls to avoid obstructing
+              airflow and instead help guide it. Similarly, just as the patio
+              was shaped to split and channel the air, the living room sofas
+              were arranged and designed to direct and distribute airflow toward
+              areas with weaker ventilation. It was important to us to choose
+              breathable fabrics and fabrics that don’t catch the smell of
+              smoke. We tested a couple of fabrics with different thicknesses
+              and textures, and sewing patterns. <br /> For the lighting, we
+              drew inspiration from the continuous light strips found in
+              airplanes and buses, adapting the idea to suit the apartment’s
+              design, the custom ceiling geometry, and the primary airflow
+              direction. The result is two linear light strips positioned along
+              the main wind paths and aligned with the ceiling’s shifts.{" "}
+            </p>
+            <div className="grid grid-cols-3">
+              <img
+                src={project.designs[7]}
+                className="object-cover rounded-lg"
+              />
+              <img
+                src={project.designs[8]}
+                className="object-cover rounded-lg"
+              />
+              <img
+                src={project.designs[9]}
+                className="object-cover rounded-lg"
+              />
+            </div>
+          </div>
+          <div className="md:grid md:grid-cols-12  pt-10">
+            <p className="col-span-6">
+              Zooming into the patio, it functions not only as a wind divider
+              but also as a cozy, intimate space for one of the roommates who
+              enjoys tending to plants, some of which he uses for cooking and
+              drinks. Placing them here, near the kitchen, ensures convenient
+              access. On the side facing the living room, we introduced a custom
+              design element that allows occupants to both feel and visually
+              perceive the airflow. This object, mounted on the wall, rotates
+              360 degrees and is made from a thin aluminum sheet, lightweight,
+              easy to fold, highly responsive to movement, and consistent with
+              the project’s overall design language. <br /> The exterior walls
+              are constructed from exposed concrete, reflecting the clients’
+              preference for material honesty. To reinforce this approach within
+              our design concept, we applied a textured finish that corresponds
+              to the movement of the wind, resulting in a rougher, more tactile
+              surface rather than a smooth, polished one.
+            </p>
+
+            <div className="col-span-5">
+              <img
+                src={project.designs[10]}
+                alt="Featured design"
+                className="w-full h-full object-contain rounded-lg"
+              />
+            </div>
+
+            <div className="col-span-1 flex flex-col gap-1">
+              <img
+                src={project.designs[14]}
+                alt="Design detail 1"
+                className="w-full h-1/4 object-contain"
+              />
+              <img
+                src={project.designs[15]}
+                alt="Design detail 2"
+                className="w-full h-1/4 object-contain"
+              />
+              <img
+                src={project.designs[16]}
+                alt="Design detail 3"
+                className="w-full h-1/4 object-contain"
+              />
+            </div>
+          </div>
+          <div className="grid grid-cols-3">
+            <img
+              src={project.designs[11]}
+              className="object-cover rounded-lg"
+            />
+            <img
+              src={project.designs[12]}
+              className="object-cover rounded-lg"
+            />
+            <img
+              src={project.designs[13]}
+              className="object-cover rounded-lg"
+            />
           </div>
         </div>
         <div id="materials" className="pt-10">
           <h2 className="text-2xl font-bold font-serif mb-10">Materials</h2>
-          {/* <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mt-5">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mt-5">
             {project.materials.map((material, idx) => (
               <img
                 key={idx}
@@ -199,20 +312,43 @@ const VentuspherePage = () => {
                 className="w-full h-auto object-cover rounded-lg"
               />
             ))}
-          </div> */}
+          </div>
         </div>
         <div id="renders" className="pt-10">
           <h2 className="text-2xl font-bold font-serif mb-4">Renders</h2>
-          {/* <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {project.renders.map((render, idx) => (
+
+          <div className="grid grid-cols-2 grid-flow-row md:grid-cols-2 gap-4 mt-5">
+            <img
+              src={project.renders[0]}
+              alt={`${project.title} Render 1`}
+              className="object-cover rounded-lg"
+            />
+            <img
+              src={project.renders[1]}
+              alt={`${project.title} Render 2`}
+              className="object-cover rounded-lg row-span-2"
+            />
+            <div className="flex flex-col gap-4">
               <img
-                key={idx}
-                src={render}
-                alt={`${project.title} Render ${idx + 1}`}
-                className="w-full h-[500px] object-cover rounded-lg"
+                src={project.renders[2]}
+                alt={`${project.title} Render 3`}
+                className="object-cover rounded-lg row-span-2"
               />
-            ))}
-          </div> */}
+              <img
+                src={project.renders[3]}
+                alt={`${project.title} Render 4`}
+                className="object-cover rounded-lg row-span-2"
+              />
+            </div>
+          </div>
+        </div>
+        <div id="model" className="pt-10">
+          <h2 className="text-2xl font-bold font-serif mb-4">Physical Model</h2>
+          <img
+            src={project.physicalModels[0]}
+            alt={`${project.title} Physical Model 1`}
+            className="w-full object-cover rounded-lg"
+          />
         </div>
         <div id="end">
           <ProjectFooter currentSlug={project.slug} />
