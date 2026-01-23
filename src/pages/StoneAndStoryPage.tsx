@@ -75,7 +75,7 @@ const StoneAndStoryPage = () => {
       <div className="container mx-auto px-6">
         <div
           id="concept"
-          className="md:grid grid-cols-1 md:grid-cols-2 justify-items-end gap-8 pt-16"
+          className="md:grid grid-cols-1 md:grid-cols-2 gap-8 pt-16"
         >
           <div>
             <h2 className="text-2xl font-bold font-serif mb-4">
@@ -99,7 +99,7 @@ const StoneAndStoryPage = () => {
               fostering a dialogue between past and future generations.
             </p>
           </div>
-          <div className="text-center">
+          <div className="text-center md:justify-self-end justify-self-center mt-10 md:mt-0">
             <ProjectDiagram concepts={project.concepts} />
           </div>
         </div>

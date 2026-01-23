@@ -5,8 +5,6 @@ import ProjectNavigation from "@/components/ProjectNavigation";
 import { ArrowLeft } from "lucide-react";
 import { useEffect, useState } from "react";
 import ProjectDiagram from "@/components/ProjectDiagram";
-import research from "@/assets/story-and-stone/research/research.jpeg";
-import timeline from "@/assets/story-and-stone/research/timeline.jpeg";
 import ProjectHeader from "@/components/ProjectHeader";
 import ProjectFooter from "@/components/ProjectFooter";
 
@@ -76,218 +74,246 @@ const HygeiaPage = () => {
       <div className="container mx-auto px-6">
         <div
           id="concept"
-          className="md:grid grid-cols-1 md:grid-cols-2 justify-items-end gap-8 pt-16"
+          className="md:grid grid-cols-1 md:grid-cols-3 gap-8 pt-16"
         >
           <div>
             <h2 className="text-2xl font-bold font-serif mb-4">
               Concept Explanation
             </h2>
-            <p>//TODO: Explanation</p>
+            <p>
+              A highly adaptable and hygienic cooking environment that supports
+              a range of lifestyles while promoting both physical and emotional
+              well-being. Its modular system allows users to customize the
+              layout and components based on household size, offering tailored
+              options for smaller and larger groups. Cylindrical, stainless
+              steel portable stations ensure easy cleaning, ensuring optimal
+              hygiene.
+            </p>
           </div>
-          <div className="text-center">
+          <div className="text-center justify-self-center mt-10 md:mt-0 col-span-2">
             <ProjectDiagram concepts={project.concepts} />
           </div>
         </div>
         <div id="research" className="pt-10">
           <h2 className="text-2xl font-bold font-serif mb-4">Research</h2>
-          <div className="md:grid md:grid-cols-2 justify-items-end gap-4 space-y-10 md:space-y-0">
-            <div>
-              <p>
-                We chose Nazareth for our project due to our personal
-                connection, its 2,000-year history, cultural diversity, and
-                significance as the childhood home of Jesus. To understand the
-                city, we studied its layout, surrounding towns, roads, and
-                cultural landscape. Focusing on what the word culture contains,
-                we categorized it into{" "}
-                <b>
-                  heritage & traditions, social & family structure, language &
-                  literature, music & dance, and handcrafts & visual arts.
-                </b>{" "}
-                Mapping key cultural sites revealed they are scattered with no
-                unifying element, and the city has only one library, located far
-                from the center. We also observed that most cultural centers
-                emphasized artistry while overlooking historical depth.
-              </p>
-              <p className="mt-4">
-                This encouraged us to examine Nazareth’s timeline from the
-                Ancient Roman period to the present, highlighting architectural
-                features from each era. Field research revealed surviving
-                elements in the city center, particularly underground
-                archaeological sites such as the Basilica of the Annunciation,
-                holy caves, and the ancient bathhouse. Exploring these sites
-                showed us that many were unfamiliar to locals and primarily
-                oriented toward tourists. We chose the Ancient Roman Bathhouse
-                to avoid religious sites and establish a space that reconnects
-                locals with the city’s rich historical layers.
-              </p>
-            </div>
-            <img
-              src={research}
-              className="md:w-3/5 h-auto object-contain aspect-square w-full"
-              alt=""
-            />
-          </div>
-
-          <img src={timeline} className="w-full h-auto object-contain mt-10" />
-        </div>
-        <div id="design" className="pt-10">
-          <div className="md:grid md:grid-cols-2 gap-4 space-y-10 md:space-y-0">
-            <div>
-              <h2 className="text-2xl font-bold font-serif mb-4">Design</h2>
-              <p>
-                We studied the Roman bathhouse’s original function, layout, and
-                sequence of spaces from the changing room through cold,
-                lukewarm, and hot rooms supported by an underfloor heating
-                system. Today, the bathhouse is divided into separate spaces
-                with individual entrances, and the original connections are
-                closed. To understand the history of the building, we collected
-                visual documents from 1890 to the present and analyzed original
-                versus added stones, aiming to preserve the authentic structure
-                while removing later interventions.
-              </p>
-              <p className="mt-4">
-                Our proposal envisions a public library that reconnects the
-                people of Nazareth with their cultural and historical heritage.
-                We sought to preserve the bathhouse’s original spatial logic,
-                the sequence of hot, lukewarm, and cold rooms, and reimagined it
-                as a narrative structure within the new program.
-              </p>
-            </div>
-            <img
-              src={project.designs[0]}
-              className="oject-cover rounded-lg mx-auto"
-            />
-          </div>
-          <div className="grid lg:grid-cols-7 md:grid-cols-4 grid-cols-2 mt-10 gap-4">
-            <div className="mx-auto">
-              <img
-                src={project.designs[1]}
-                className="w-48 h-48 object-cover"
-              />
-              <p className="text-center">1890</p>
-            </div>
-            <div className="mx-auto">
-              <img
-                src={project.designs[2]}
-                className="w-48 h-48 object-cover"
-              />
-              <p className="text-center">1900</p>
-            </div>
-            <div className="mx-auto">
-              <img
-                src={project.designs[3]}
-                className="w-48 h-48 object-cover"
-              />
-              <p className="text-center">1900</p>
-            </div>
-            <div className="mx-auto">
-              <img
-                src={project.designs[4]}
-                className="w-48 h-48 object-cover"
-              />
-              <p className="text-center">1910</p>
-            </div>
-            <div className="mx-auto">
-              <img
-                src={project.designs[5]}
-                className="w-48 h-48 object-cover"
-              />
-              <p className="text-center">1910</p>
-            </div>
-            <div className="mx-auto">
-              <img
-                src={project.designs[6]}
-                className="w-48 h-48 object-cover"
-              />
-              <p className="text-center">1929</p>
-            </div>
-            <div className="mx-auto">
-              <img
-                src={project.designs[7]}
-                className="w-48 h-48 object-cover"
-              />
-              <p className="text-center">1940</p>
-            </div>
-          </div>
           <p>
-            <br /> <br />
-            The design starts with a coffee shop, preserved as part of locals’
-            daily routine, and transitions through a mini museum into the
-            library. The library moves from open communal areas to intimate
-            underground zones, culminating in the hypocaust chamber, which
-            houses historical artifacts and rare books, merging personal memory
-            with collective history. Functions are arranged to follow the
-            bathhouse’s original spatial sequence from the cold (public coffee
-            shop), through the museum, to the hot (library), enhancing
-            circulation and experience. The main entrance is reused, other
-            entries closed, and original internal connections between rooms
-            restored. In addition, there is also a venue space with its own
-            entrance designated for events, it is separated from the rest of the
-            spaces, since it is not considered one of the main rooms in the
-            bathhouse, so we gave it an occasional function. There are two ways
-            to approach the underground space: the first using a spiral
-            staircase and the second using the back vault and into the old oven
-            space. It was important for us to give the people a chance to get
-            direct contact/ friction with underground archaeology and get the
-            full experience. The underground path functions both as an
-            experiential route and an archive, with shelves integrated between
-            the hypocaust columns to display and store special books and maps
-            within reach. Furniture was designed to fit seamlessly within curved
-            stone walls, columns, and niches, centered to maintain circulation,
-            while contrasting the stone with modern, lightweight pieces
-            featuring curved edges and thin black metal. Black metal is also
-            used in staircases and the building’s support system. Floor levels
-            were adjusted to create the path, and a steel beam and column grid
-            was carefully aligned with the hypocaust to avoid disturbing the
-            archaeology or circulation. In the hot room, we created a unique
-            experience by adding a central opening to reveal the underground
-            path and hypocaust system. The floating floor includes a gap to
-            preserve the stone walls and emphasize the connection between upper
-            and lower levels, enhanced by a light fixture radiating in both
-            directions. Light plays a key role in the spatial experience: bright
-            lighting in the coffee shop conveys openness, gradually dimming into
-            softer, intimate lighting deeper inside. The intervention respects
-            the exterior, keeping facade openings’ dimensions and grid ratios
-            consistent with the upper floors.
+            This project emerged from a growing awareness of how living
+            environments influence both physical and emotional well-being. We
+            were inspired by the belief that the kitchen, as the heart of the
+            home, should actively support healthier and more balanced
+            lifestyles. This led us to explore the concept in depth, focusing on
+            the multiple dimensions of hygiene and well-being. Alongside this,
+            we examined the historical evolution of the kitchen, including early
+            20th-century visions of the ‘future kitchen’ and the development of
+            kitchen design over time. This research highlighted the importance
+            of efficiency and adaptability, which ultimately formed the
+            foundation of the project.
           </p>
         </div>
-        <div id="materials" className="pt-10">
-          <h2 className="text-2xl font-bold font-serif mb-10">Materials</h2>
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mt-5">
-            {project.materials.map((material, idx) => (
+        <div id="design" className="pt-10">
+          <h2 className="text-2xl font-bold font-serif mb-4">Design</h2>
+          <div className="grid grid-cols-2">
+            <p>
+              Our kitchen project is centered around a highly modular and
+              adaptable design, offering users the flexibility to personalize
+              their space according to their lifestyle and household size. The
+              system is thoughtfully structured to suit a wide range of living
+              situations, with two main product ranges tailored for 1–3 users or
+              4–6 users. Each component is available in multiple sizes, allowing
+              users to select and combine modules that best meet their
+              functional and spatial needs. This adaptability not only enhances
+              practicality but also supports a more personal connection to the
+              space.
+              <br />
+              <br />A core principle of the design is its strong commitment to
+              hygiene. The kitchen features portable, cylindrical stations
+              designed with smooth, corner-free surfaces that are easy to clean
+              and maintain. The materials were carefully selected to support
+              this goal; stainless steel is used for its durability and
+              low-maintenance qualities and Corian, that forms the base
+              structure, chosen for its strength and lightweight nature. These
+              materials ensure that the units are both robust and easy to move,
+              making the kitchen highly functional and efficient in everyday
+              use.
+              <br />
+            </p>
+            <div className="grid grid-cols">
               <img
-                key={idx}
-                src={material}
-                alt={`${project.title} Material ${idx + 1}`}
-                className="w-full h-auto object-cover rounded-lg"
+                src={project.designs[0]}
+                alt="design image"
+                className="object-cover w-2/3 mx-auto"
               />
-            ))}
+            </div>
+          </div>
+
+          <div className="grid grid-cols-3 grid-rows-3 col-span-2">
+            <img
+              src={project.designs[2]}
+              alt="design image"
+              className="object-contain h-full w-full"
+            />
+            <img
+              src={project.designs[3]}
+              alt="design image"
+              className="object-contain h-full w-full"
+            />
+            <img
+              src={project.designs[4]}
+              alt="design image"
+              className="object-contain h-full w-full"
+            />
+            <img
+              src={project.designs[5]}
+              alt="design image"
+              className="object-contain h-full w-full"
+            />
+            <img
+              src={project.designs[6]}
+              alt="design image"
+              className="object-contain h-full w-full"
+            />
+            <img
+              src={project.designs[7]}
+              alt="design image"
+              className="object-contain h-full w-full"
+            />
+            <img
+              src={project.designs[8]}
+              alt="design image"
+              className="object-contain h-full w-full"
+            />
+            <img
+              src={project.designs[9]}
+              alt="design image"
+              className="object-contain h-full w-full"
+            />
+            <img
+              src={project.designs[10]}
+              alt="design image"
+              className="object-contain h-full w-full"
+            />
+          </div>
+          <div className="grid grid-cols-2 gap-8 mt-10 justify-center">
+            <p>
+              <br /> The layout goes beyond physical function by also addressing
+              mental and social wellbeing. Each station is intuitively designed
+              to encourage organization and reduce clutter, which helps create a
+              calm, orderly environment. This contributes to a sense of mental
+              clarity and lowers the stress often associated with household
+              tasks. Socially, the kitchen is envisioned as a collaborative and
+              dynamic space. Its flexible layout makes it ideal for interaction,
+              allowing users to create an open, inviting atmosphere where
+              cooking becomes a shared experience rather than an isolated task.
+              Whether it’s for everyday family use or for hosting gatherings,
+              the space encourages connection and participation, reflecting the
+              idea of the kitchen as a true heart of the home.
+              <br />
+              <br /> To support even greater independence and functionality,
+              future plans for the project include the integration of power
+              solutions such as built-in charging stations or portable energy
+              sources. This would allow each station to operate independently,
+              free from fixed utilities, and further enhance the kitchen’s
+              adaptability to various uses and settings.
+            </p>
+            <div className="grid grid-cols-2 gap-4 items-center">
+              <div>
+                <img
+                  src={project.designs[11]}
+                  alt="design image"
+                  className="object-contain"
+                />
+                <p className="text-center mt-4 text-xl font-bold">
+                  Expanded Mode
+                </p>
+              </div>
+              <div>
+                <img
+                  src={project.designs[12]}
+                  alt="design image"
+                  className="object-contain"
+                />
+                <p className="text-center mt-4 text-xl font-bold">
+                  Compact Mode
+                </p>
+              </div>
+            </div>
           </div>
         </div>
         <div id="renders" className="pt-10">
           <h2 className="text-2xl font-bold font-serif mb-4">Renders</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {project.renders.map((render, idx) => (
-              <img
-                key={idx}
-                src={render}
-                alt={`${project.title} Render ${idx + 1}`}
-                className="w-full h-[500px] object-cover rounded-lg"
-              />
-            ))}
+          <div className="grid grid-cols-3 gap-4">
+            <img
+              src={project.renders[0]}
+              alt="design image"
+              className="object-contain"
+            />
+            <img
+              src={project.renders[1]}
+              alt="design image"
+              className="object-contain"
+            />
+            <img
+              src={project.renders[2]}
+              alt="design image"
+              className="object-contain"
+            />
           </div>
         </div>
+        <div id="materials"></div>
         <div id="model" className="pt-10">
           <h2 className="text-2xl font-bold font-serif mb-4">Physical Model</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {project.physicalModels.map((model, idx) => (
-              <img
-                key={idx}
-                src={model}
-                alt={`${project.title} Physical Model ${idx + 1}`}
-                className="w-full h-[500px] object-cover rounded-lg"
-              />
-            ))}
+
+          <div className="grid grid-cols-12 gap-4">
+            <img
+              src={project.physicalModels[0]}
+              alt="design image"
+              className="object-contain col-span-3"
+            />
+            <img
+              src={project.physicalModels[1]}
+              alt="design image"
+              className="object-contain col-span-3"
+            />
+            <img
+              src={project.physicalModels[2]}
+              alt="design image"
+              className="object-contain col-span-3"
+            />
+            <img
+              src={project.physicalModels[3]}
+              alt="design image"
+              className="object-contain col-span-3"
+            />
+            <img
+              src={project.physicalModels[4]}
+              alt="design image"
+              className="object-contain col-span-3"
+            />
+            <img
+              src={project.physicalModels[5]}
+              alt="design image"
+              className="object-contain col-span-3"
+            />
+            <img
+              src={project.physicalModels[6]}
+              alt="design image"
+              className="object-contain col-span-3"
+            />
+            <img
+              src={project.physicalModels[7]}
+              alt="design image"
+              className="object-contain col-span-3"
+            />
+            <img
+              src={project.physicalModels[10]}
+              alt="design image"
+              className="object-contain col-span-6"
+            />
+            <img
+              src={project.physicalModels[11]}
+              alt="design image"
+              className="object-contain col-span-6"
+            />
           </div>
         </div>
         <div id="end">

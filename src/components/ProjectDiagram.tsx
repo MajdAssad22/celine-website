@@ -8,7 +8,7 @@ const ProjectDiagram: React.FC<ProjectDiagramProps> = ({ concepts }) => {
   return (
     <>
       <h3 className="w-full text-center text-xl font-bold mb-6">Key Points</h3>
-      <div className="flex items-center justify-center gap-8 flex-wrap max-w-lg">
+      <div className="flex items-center justify-center gap-8 flex-wrap max-w-2xl">
         {concepts.map((concept, idx) => (
           <div
             key={idx}
