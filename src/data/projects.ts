@@ -55,6 +55,8 @@ import ventusphereDesign14 from "@/assets/ventusphere/designs/ventusphere-design
 import ventusphereDesign15 from "@/assets/ventusphere/designs/ventusphere-design-15.jpeg";
 import ventusphereDesign16 from "@/assets/ventusphere/designs/ventusphere-design-16.jpeg";
 import ventusphereDesign17 from "@/assets/ventusphere/designs/ventusphere-design-17.jpeg";
+import ventusphereDesign18 from "@/assets/ventusphere/designs/ventusphere-design-18.jpeg";
+import ventusphereDesign19 from "@/assets/ventusphere/designs/ventusphere-design-19.jpeg";
 
 import ventusphereMaterial1 from "@/assets/ventusphere/materials/ventusphere-material-1.png";
 import ventusphereMaterial2 from "@/assets/ventusphere/materials/ventusphere-material-2.png";
@@ -67,6 +69,40 @@ import ventusphereRender3 from "@/assets/ventusphere/renders/ventusphere-render-
 import ventusphereRender4 from "@/assets/ventusphere/renders/ventusphere-render-4.jpeg";
 
 import ventusphereModel1 from "@/assets/ventusphere/physical-models/ventusphere-model-1.jpeg";
+
+// Hygeia import
+import hygeiaDesign1 from "@/assets/hygeia/designs/hygeia-design-1.jpg";
+import hygeiaDesign2 from "@/assets/hygeia/designs/hygeia-design-2.jpg";
+import hygeiaDesign3 from "@/assets/hygeia/designs/hygeia-design-3.jpg";
+import hygeiaDesign4 from "@/assets/hygeia/designs/hygeia-design-4.jpg";
+import hygeiaDesign5 from "@/assets/hygeia/designs/hygeia-design-5.jpg";
+import hygeiaDesign6 from "@/assets/hygeia/designs/hygeia-design-6.jpg";
+import hygeiaDesign7 from "@/assets/hygeia/designs/hygeia-design-7.jpg";
+import hygeiaDesign8 from "@/assets/hygeia/designs/hygeia-design-8.jpg";
+import hygeiaDesign9 from "@/assets/hygeia/designs/hygeia-design-9.jpg";
+import hygeiaDesign10 from "@/assets/hygeia/designs/hygeia-design-10.jpg";
+import hygeiaDesign11 from "@/assets/hygeia/designs/hygeia-design-11.jpg";
+import hygeiaDesign12 from "@/assets/hygeia/designs/hygeia-design-12.jpg";
+import hygeiaDesign13 from "@/assets/hygeia/designs/hygeia-design-13.jpg";
+
+import hygeiaModel1 from "@/assets/hygeia/physical-models/hygeia-model-1.jpeg";
+import hygeiaModel2 from "@/assets/hygeia/physical-models/hygeia-model-2.jpeg";
+import hygeiaModel3 from "@/assets/hygeia/physical-models/hygeia-model-3.jpeg";
+import hygeiaModel4 from "@/assets/hygeia/physical-models/hygeia-model-4.jpeg";
+import hygeiaModel5 from "@/assets/hygeia/physical-models/hygeia-model-5.jpeg";
+import hygeiaModel6 from "@/assets/hygeia/physical-models/hygeia-model-6.jpeg";
+import hygeiaModel7 from "@/assets/hygeia/physical-models/hygeia-model-7.jpeg";
+import hygeiaModel8 from "@/assets/hygeia/physical-models/hygeia-model-8.jpeg";
+import hygeiaModel9 from "@/assets/hygeia/physical-models/hygeia-model-9.jpeg";
+import hygeiaModel10 from "@/assets/hygeia/physical-models/hygeia-model-10.jpeg";
+import hygeiaModel11 from "@/assets/hygeia/physical-models/hygeia-model-11.jpeg";
+import hygeiaModel12 from "@/assets/hygeia/physical-models/hygeia-model-12.jpeg";
+
+import hygeiaRender1 from "@/assets/hygeia/renders/hygeia-render-1.jpeg";
+import hygeiaRender2 from "@/assets/hygeia/renders/hygeia-render-2.jpeg";
+import hygeiaRender3 from "@/assets/hygeia/renders/hygeia-render-3.jpeg";
+
+import hygeiaBanner from "@/assets/hygeia/hygeia-banner.jpeg";
 
 export const projects = [
   {
@@ -132,13 +168,44 @@ export const projects = [
       "Hygienic environment",
     ],
     concepts: [
-      "Community",
-      "Daily Use",
-      "Archeology",
-      "Cultural Center",
-      "Heritage",
+      "Futuristic design",
+      "Modularity",
+      "Emotional well-being",
+      "Hygienic environment",
     ],
     thumbnail: hygeia,
+    banner: hygeiaBanner,
+    designs: [
+      hygeiaDesign1,
+      hygeiaDesign2,
+      hygeiaDesign3,
+      hygeiaDesign4,
+      hygeiaDesign5,
+      hygeiaDesign6,
+      hygeiaDesign7,
+      hygeiaDesign8,
+      hygeiaDesign9,
+      hygeiaDesign10,
+      hygeiaDesign11,
+      hygeiaDesign12,
+      hygeiaDesign13,
+    ],
+    renders: [hygeiaRender1, hygeiaRender2, hygeiaRender3],
+    physicalModels: [
+      hygeiaModel1,
+      hygeiaModel2,
+      hygeiaModel3,
+      hygeiaModel4,
+      hygeiaModel5,
+      hygeiaModel6,
+      hygeiaModel7,
+      hygeiaModel8,
+      hygeiaModel9,
+      hygeiaModel10,
+      hygeiaModel11,
+      hygeiaModel12,
+    ],
+    materials: [],
   },
   {
     id: "3",
@@ -168,6 +235,8 @@ export const projects = [
       ventusphereDesign15,
       ventusphereDesign16,
       ventusphereDesign17,
+      ventusphereDesign18,
+      ventusphereDesign19,
     ],
     materials: [
       ventusphereMaterial1,
