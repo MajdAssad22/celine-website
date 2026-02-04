@@ -7,7 +7,6 @@ import { useEffect, useState } from "react";
 import ProjectDiagram from "@/components/ProjectDiagram";
 import ProjectHeader from "@/components/ProjectHeader";
 import ProjectFooter from "@/components/ProjectFooter";
-import research from "@/assets/ventusphere/research/research.jpeg";
 import { ZoomImage } from "@/components/ZoomImage";
 
 const VentuspherePage = () => {
@@ -122,8 +121,8 @@ const VentuspherePage = () => {
 
             <div className="flex justify-center self-start">
               <img
-                src={research}
-                className="object-contain w-5/6"
+                src={project.researchImages[0]}
+                className="object-contain w-4/6"
                 alt="research image"
               />
             </div>
@@ -152,10 +151,6 @@ const VentuspherePage = () => {
               </p>
             </div>
             <div className="col-span-6 row-span-2 w-5/6">
-              {/* <img
-                src={project.designs[2]}
-                className="object-cover rounded-lg"
-              /> */}
               <ZoomImage
                 src={project.designs[2]}
                 alt="Design image"
