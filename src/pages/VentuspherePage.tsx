@@ -97,7 +97,7 @@ const VentuspherePage = () => {
         </div>
         <div id="research" className="pt-10">
           <h2 className="text-2xl font-bold font-serif mb-4">Research</h2>
-          <div className="lg:grid lg:grid-cols-2 justify-items-end gap-8 space-y-10 lg:space-y-0">
+          <div className="flex flex-col lg:grid lg:grid-cols-2 justify-items-end gap-8 space-y-10 lg:space-y-0">
             <div>
               <p>
                 Because airflow and its intensity can only be understood through
@@ -130,8 +130,8 @@ const VentuspherePage = () => {
         </div>
         <div id="design" className="pt-10">
           <h2 className="text-2xl font-bold font-serif mb-4">Design</h2>
-          <div className="grid grid-cols-12 mb-8 justify-items-end gap-8 space-y-10 lg:space-y-0">
-            <div className="col-span-6">
+          <div className="flex flex-col lg:grid lg:grid-cols-12 mb-8 justify-items-end gap-8 space-y-10 lg:space-y-0">
+            <div className="lg:col-span-6">
               <p>
                 After determining our main façade, we decided to make it
                 diagonal to draw air into the apartment, directing airflow
@@ -150,32 +150,32 @@ const VentuspherePage = () => {
                 smokes to help direct the smoke outside.
               </p>
             </div>
-            <div className="col-span-6 row-span-2 w-5/6">
+            <div className="lg:col-span-6 lg:row-span-2 w-full lg:w-5/6">
               <ZoomImage
                 src={project.designs[2]}
                 alt="Design image"
-                containerClassName="w-5/6"
+                containerClassName="w-full lg:w-5/6"
                 className="object-cover rounded-lg"
                 zoomLevel={4}
                 magnifierSize={120}
               />
             </div>
-            <div className="col-span-3">
+            <div className="lg:col-span-3 w-full">
               <img
                 src={project.designs[1]}
-                className="object-cover rounded-lg"
+                className="object-cover rounded-lg w-full"
               />
             </div>
-            <div className="col-span-3">
+            <div className="lg:col-span-3 w-full">
               <img
                 src={project.designs[0]}
-                className="object-cover rounded-lg"
+                className="object-cover rounded-lg w-full"
               />
             </div>
           </div>
 
-          <div className="md:grid md:grid-cols-3 mt-10 space-y-10 md:space-y-0">
-            <div className="col-span-2">
+          <div className="flex flex-col md:grid md:grid-cols-3 mt-10 space-y-10 md:space-y-0">
+            <div className="md:col-span-2">
               <p>
                 The design of the round windows was inspired by wind instruments
                 such as the flute and saxophone, whose circular openings and
@@ -207,15 +207,15 @@ const VentuspherePage = () => {
                 thicknesses and textures, and sewing patterns. <br />
               </p>
             </div>
-            <div className="flex flex-row justify-center px-10">
-              <div className="flex flex-col text-center w-2/3">
+            <div className="flex flex-row justify-center px-10 gap-4 md:gap-0">
+              <div className="flex flex-col text-center w-full md:w-2/3">
                 <img
                   src={project.designs[3]}
                   className="object-cover rounded-lg"
                 />
                 <p>Horizontal</p>
               </div>
-              <div className="flex flex-col text-center w-2/3">
+              <div className="flex flex-col text-center w-full md:w-2/3">
                 <img src={project.designs[4]} className="object-contain" />
                 <p>Vertical</p>
               </div>
@@ -231,18 +231,18 @@ const VentuspherePage = () => {
               className="object-cover rounded-lg mt-10 "
             />
           </div>
-          <div className="grid grid-rows-2 grid-cols-3 grid-flow-col justify-items-center mt-10 gap-2 items-center">
+          <div className="grid grid-cols-1 md:grid-cols-3 md:grid-rows-2 md:grid-flow-col justify-items-center mt-10 gap-2 items-center">
             <img
               src={project.designs[7]}
-              className="object-contain w-[30rem] "
+              className="object-contain w-full md:w-[30rem] "
             />
             <img
               src={project.designs[8]}
-              className="object-contain w-[30rem] "
+              className="object-contain w-full md:w-[30rem] "
             />
             <img
               src={project.designs[9]}
-              className="object-contain w-[30rem] "
+              className="object-contain w-full md:w-[30rem] "
             />
             <div className="justify-self-center">
               <p className="">
@@ -256,10 +256,10 @@ const VentuspherePage = () => {
             </div>
             <img
               src={project.designs[17]}
-              className="row-span-2 object-contain h-[50rem]"
+              className="md:row-span-2 object-contain h-auto md:h-[50rem] md:w-full w-1/2 mx-auto"
             />
           </div>
-          <div className="grid grid-cols-2 grid-rows-2 gap-2 mt-10 items-center justify-items-center">
+          <div className="grid grid-cols-1 md:grid-cols-2 md:grid-rows-2 gap-2 mt-10 items-start md:items-center justify-items-center">
             <p>
               Zooming into the patio, it functions not only as a wind divider
               but also as a cozy, intimate space for one of the roommates who
@@ -273,14 +273,14 @@ const VentuspherePage = () => {
               the project’s overall design language.
             </p>
 
-            <div className="row-span-2">
+            <div className="md:row-span-2 w-full md:w-auto">
               <img
                 src={project.designs[10]}
                 alt="Featured design"
-                className="w-full h-3/4 object-contain rounded-lg"
+                className="w-full h-auto md:h-3/4 object-contain rounded-lg"
               />
             </div>
-            <div className="flex gap-4 w-full justify-evenly">
+            <div className="flex gap-4 w-full justify-evenly md:col-start-1">
               <img
                 src={project.designs[14]}
                 alt="Design detail 1"
@@ -305,18 +305,18 @@ const VentuspherePage = () => {
               className="object-contain mt-10"
             />
           </div>
-          <div className="grid grid-cols-2 grid-rows-2 gap-2 mt-10 items-center justify-items-center">
+          <div className="grid grid-cols-1 md:grid-cols-2 md:grid-rows-2 gap-2 mt-10 items-center justify-items-center">
             <p className="max-w-lg ">
               The exterior walls are constructed from exposed concrete,
-              reflecting the clients’ preference for material honesty. To
+              reflecting the clients' preference for material honesty. To
               reinforce this approach within our design concept, we applied a
               textured finish that corresponds to the movement of the wind,
               resulting in a rougher, more tactile surface rather than a smooth,
               polished one.
             </p>
-            <img src={project.designs[13]} className="object-contain" />
-            <img src={project.designs[11]} className="object-contain" />
-            <img src={project.designs[12]} className="object-contain" />
+            <img src={project.designs[13]} className="object-contain w-full" />
+            <img src={project.designs[11]} className="object-contain w-full" />
+            <img src={project.designs[12]} className="object-contain w-full" />
           </div>
         </div>
         <div id="materials" className="pt-10">
@@ -335,7 +335,7 @@ const VentuspherePage = () => {
         <div id="renders" className="pt-10">
           <h2 className="text-2xl font-bold font-serif mb-4">Renders</h2>
 
-          <div className="grid grid-cols-2 grid-flow-row md:grid-cols-2 gap-4 mt-5">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-5">
             <img
               src={project.renders[0]}
               alt={`${project.title} Render 1`}
@@ -344,18 +344,18 @@ const VentuspherePage = () => {
             <img
               src={project.renders[1]}
               alt={`${project.title} Render 2`}
-              className="object-cover rounded-lg row-span-2"
+              className="object-cover rounded-lg hidden md:block md:row-span-2"
             />
-            <div className="flex flex-col gap-4">
+            <div className="flex flex-col gap-4 md:flex md:flex-col">
               <img
                 src={project.renders[2]}
                 alt={`${project.title} Render 3`}
-                className="object-cover rounded-lg row-span-2"
+                className="object-cover rounded-lg"
               />
               <img
                 src={project.renders[3]}
                 alt={`${project.title} Render 4`}
-                className="object-cover rounded-lg row-span-2"
+                className="object-cover rounded-lg"
               />
             </div>
           </div>
