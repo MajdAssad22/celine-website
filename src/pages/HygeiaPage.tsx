@@ -95,7 +95,7 @@ const HygeiaPage = () => {
           </div>
         </div>
         <div id="research" className="pt-10">
-          <div className="grid grid-cols-2 gap-8">
+          <div className="flex flex-col lg:grid lg:grid-cols-2 gap-8">
             <div>
               <h2 className="text-2xl font-bold font-serif mb-4">Research</h2>
               <p>
@@ -117,14 +117,14 @@ const HygeiaPage = () => {
               <img
                 src={project.researchImages[0]}
                 alt="research image"
-                className="object-contain w-3/4 mx-auto"
+                className="object-contain w-full lg:w-3/4 mx-auto"
               />
             </div>
           </div>
         </div>
         <div id="design" className="pt-10">
           <h2 className="text-2xl font-bold font-serif mb-4">Design</h2>
-          <div className="grid grid-cols-2">
+          <div className="flex flex-col lg:grid lg:grid-cols-2 gap-8">
             <p>
               Our kitchen project is centered around a highly modular and
               adaptable design, offering users the flexibility to personalize
@@ -158,7 +158,7 @@ const HygeiaPage = () => {
             </div>
           </div>
 
-          <div className="grid grid-cols-3 grid-rows-3 col-span-2">
+          <div className="grid grid-cols-1 md:grid-cols-3 md:grid-rows-3 gap-4 md:gap-0">
             <img
               src={project.designs[2]}
               alt="design image"
@@ -205,7 +205,7 @@ const HygeiaPage = () => {
               className="object-contain h-full w-full"
             />
           </div>
-          <div className="grid grid-cols-2 gap-8 mt-10 justify-center">
+          <div className="flex flex-col lg:grid lg:grid-cols-2 gap-8 mt-10">
             <p>
               <br /> The layout goes beyond physical function by also addressing
               mental and social wellbeing. Each station is intuitively designed
@@ -227,7 +227,7 @@ const HygeiaPage = () => {
               free from fixed utilities, and further enhance the kitchen’s
               adaptability to various uses and settings.
             </p>
-            <div className="grid grid-cols-2 gap-4 items-center">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 items-center">
               <div>
                 <img
                   src={project.designs[11]}
@@ -253,7 +253,7 @@ const HygeiaPage = () => {
         </div>
         <div id="renders" className="pt-10">
           <h2 className="text-2xl font-bold font-serif mb-4">Renders</h2>
-          <div className="grid grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             <img
               src={project.renders[0]}
               alt="design image"
@@ -275,56 +275,56 @@ const HygeiaPage = () => {
         <div id="model" className="pt-10">
           <h2 className="text-2xl font-bold font-serif mb-4">Physical Model</h2>
 
-          <div className="grid grid-cols-12 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
             <img
               src={project.physicalModels[0]}
               alt="design image"
-              className="object-contain col-span-3"
+              className="object-contain w-full"
             />
             <img
               src={project.physicalModels[1]}
               alt="design image"
-              className="object-contain col-span-3"
+              className="object-contain w-full"
             />
             <img
               src={project.physicalModels[2]}
               alt="design image"
-              className="object-contain col-span-3"
+              className="object-contain w-full"
             />
             <img
               src={project.physicalModels[3]}
               alt="design image"
-              className="object-contain col-span-3"
+              className="object-contain w-full"
             />
             <img
               src={project.physicalModels[4]}
               alt="design image"
-              className="object-contain col-span-3"
+              className="object-contain w-full"
             />
             <img
               src={project.physicalModels[5]}
               alt="design image"
-              className="object-contain col-span-3"
+              className="object-contain w-full"
             />
             <img
               src={project.physicalModels[6]}
               alt="design image"
-              className="object-contain col-span-3"
+              className="object-contain w-full"
             />
             <img
               src={project.physicalModels[7]}
               alt="design image"
-              className="object-contain col-span-3"
+              className="object-contain w-full"
             />
             <img
               src={project.physicalModels[10]}
               alt="design image"
-              className="object-contain col-span-6"
+              className="object-contain w-full md:col-span-1 lg:col-span-2"
             />
             <img
               src={project.physicalModels[11]}
               alt="design image"
-              className="object-contain col-span-6"
+              className="object-contain w-full md:col-span-1 lg:col-span-2"
             />
           </div>
         </div>
