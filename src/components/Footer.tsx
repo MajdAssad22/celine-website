@@ -1,3 +1,5 @@
+import { contactInfo, socialLinks } from "@/data/contact";
+
 const Footer = () => {
   return (
     <footer className="bg-primary text-primary-foreground py-8">
@@ -8,13 +10,14 @@ const Footer = () => {
               Celine Assad
             </div>
             <p className="text-primary-foreground/80 text-sm">
-              Interior Designer • Oakville, ON
+              Interior Designer • {contactInfo.address}
             </p>
           </div>
 
           <div className="text-center md:text-right">
             <p className="text-primary-foreground/80 text-sm">
-              © 2024 Celine Assad Design. All rights reserved.
+              © {new Date().getFullYear()} Celine Assad Design. All rights
+              reserved.
             </p>
             <p className="text-primary-foreground/60 text-xs mt-1">
               Crafted with passion for beautiful spaces
