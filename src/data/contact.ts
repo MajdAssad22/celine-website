@@ -1,7 +1,7 @@
 export const contactInfo = {
-  email: "example@example.com",
-  phone: "+1234567890",
-  address: "123 Main St, Anytown, USA",
+  email: "celineassad00@gmail.com",
+  phone: "+972 505738612",
+  address: "Nazareth, Israel",
 };
 
 export const socialLinks = {

@@ -26,7 +26,7 @@ const Contact = () => {
   };
 
   const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) => {
     setFormData((prev) => ({
       ...prev,
@@ -89,7 +89,7 @@ const Contact = () => {
               </div>
             </div>
 
-            <div>
+            {/* <div>
               <h4 className="font-medium text-foreground mb-4">
                 Follow My Work
               </h4>
@@ -107,7 +107,7 @@ const Contact = () => {
                   <Linkedin className="h-5 w-5" />
                 </a>
               </div>
-            </div>
+            </div> */}
           </div>
 
           {/* Contact Form */}
