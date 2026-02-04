@@ -1,6 +1,3 @@
-// Hygeia import
-import hygeia from "@/assets/hygeia/hygeia-thumbnail.png";
-
 // Store & Story imports
 import storyAndStoneThumbnail from "@/assets/story-and-stone/story-and-stone-thumbnail.png";
 
@@ -22,11 +19,16 @@ import storyAndStoneDesign15 from "@/assets/story-and-stone/designs/story-and-st
 import storyAndStoneDesign16 from "@/assets/story-and-stone/designs/story-and-stone-design-16.jpg";
 import storyAndStoneDesign17 from "@/assets/story-and-stone/designs/story-and-stone-design-17.jpeg";
 import storyAndStoneDesign18 from "@/assets/story-and-stone/designs/story-and-stone-design-18.jpeg";
+import storyAndStoneDesign19 from "@/assets/story-and-stone/designs/story-and-stone-design-19.jpeg";
+import storyAndStoneDesign20 from "@/assets/story-and-stone/designs/story-and-stone-design-20.jpeg";
+import storyAndStoneDesign21 from "@/assets/story-and-stone/designs/story-and-stone-design-21.jpeg";
 
 import storyAndStoneRender1 from "@/assets/story-and-stone/renders/story-and-stone-render-1.jpeg";
 import storyAndStoneRender2 from "@/assets/story-and-stone/renders/story-and-stone-render-2.jpeg";
 import storyAndStoneRender3 from "@/assets/story-and-stone/renders/story-and-stone-render-3.jpeg";
 import storyAndStoneRender4 from "@/assets/story-and-stone/renders/story-and-stone-render-4.jpeg";
+
+import stoneAndStoryResearch1 from "@/assets/story-and-stone/research/story-and-stone-research-1.jpeg";
 
 import storyAndStoneModel1 from "@/assets/story-and-stone/physical-models/story-and-stone-model-1.jpeg";
 
@@ -68,9 +70,13 @@ import ventusphereRender2 from "@/assets/ventusphere/renders/ventusphere-render-
 import ventusphereRender3 from "@/assets/ventusphere/renders/ventusphere-render-3.jpeg";
 import ventusphereRender4 from "@/assets/ventusphere/renders/ventusphere-render-4.jpeg";
 
+import ventusphereResearch1 from "@/assets/ventusphere/research/ventusphere-research-1.jpeg";
+
 import ventusphereModel1 from "@/assets/ventusphere/physical-models/ventusphere-model-1.jpeg";
 
 // Hygeia import
+import hygeiaThumbnail from "@/assets/hygeia/hygeia-thumbnail.png";
+
 import hygeiaDesign1 from "@/assets/hygeia/designs/hygeia-design-1.jpg";
 import hygeiaDesign2 from "@/assets/hygeia/designs/hygeia-design-2.jpg";
 import hygeiaDesign3 from "@/assets/hygeia/designs/hygeia-design-3.jpg";
@@ -102,6 +108,8 @@ import hygeiaRender1 from "@/assets/hygeia/renders/hygeia-render-1.jpeg";
 import hygeiaRender2 from "@/assets/hygeia/renders/hygeia-render-2.jpeg";
 import hygeiaRender3 from "@/assets/hygeia/renders/hygeia-render-3.jpeg";
 
+import hygeiaResearch1 from "@/assets/hygeia/research/hygeia-research-1.jpeg";
+
 import hygeiaBanner from "@/assets/hygeia/hygeia-banner.jpeg";
 
 export const projects = [
@@ -121,6 +129,7 @@ export const projects = [
     ],
     thumbnail: storyAndStoneThumbnail,
     banner: storyAndStoneRender1,
+    researchImages: [stoneAndStoryResearch1],
     renders: [
       storyAndStoneRender1,
       storyAndStoneRender2,
@@ -153,6 +162,9 @@ export const projects = [
       storyAndStoneDesign16,
       storyAndStoneDesign17,
       storyAndStoneDesign18,
+      storyAndStoneDesign19,
+      storyAndStoneDesign20,
+      storyAndStoneDesign21,
     ],
   },
   {
@@ -173,8 +185,9 @@ export const projects = [
       "Emotional well-being",
       "Hygienic environment",
     ],
-    thumbnail: hygeia,
+    thumbnail: hygeiaThumbnail,
     banner: hygeiaBanner,
+    researchImages: [hygeiaResearch1],
     designs: [
       hygeiaDesign1,
       hygeiaDesign2,
@@ -217,6 +230,7 @@ export const projects = [
     concepts: ["Natural ventilation", "Raw materials", "Client focused"],
     thumbnail: ventusphereThumbnail,
     banner: ventusphereBanner,
+    researchImages: [ventusphereResearch1],
     designs: [
       ventusphereDesign1,
       ventusphereDesign2,

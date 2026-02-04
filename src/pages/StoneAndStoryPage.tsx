@@ -5,8 +5,6 @@ import ProjectNavigation from "@/components/ProjectNavigation";
 import { ArrowLeft } from "lucide-react";
 import { useEffect, useState } from "react";
 import ProjectDiagram from "@/components/ProjectDiagram";
-import research from "@/assets/story-and-stone/research/research.jpeg";
-import timeline from "@/assets/story-and-stone/research/timeline.jpeg";
 import ProjectHeader from "@/components/ProjectHeader";
 import ProjectFooter from "@/components/ProjectFooter";
 
@@ -105,7 +103,7 @@ const StoneAndStoryPage = () => {
         </div>
         <div id="research" className="pt-10">
           <h2 className="text-2xl font-bold font-serif mb-4">Research</h2>
-          <div className="md:grid md:grid-cols-2 justify-items-end gap-4 space-y-10 md:space-y-0">
+          <div className="md:grid md:grid-cols-2 justify-items-end gap-8 space-y-10 md:space-y-0">
             <div>
               <p>
                 We chose Nazareth for our project due to our personal
@@ -138,16 +136,11 @@ const StoneAndStoryPage = () => {
             </div>
 
             <img
-              src={research}
-              className="md:w-4/5 h-auto object-contain w-full"
+              src={project.researchImages[0]}
+              className="h-auto object-contain w-full"
               alt="research image"
             />
           </div>
-
-          <img
-            src={timeline}
-            className="w-4/5 h-auto mx-auto object-contain pt-10"
-          />
         </div>
         <div id="design" className="pt-10">
           <div className="md:grid md:grid-cols-2 gap-4 space-y-10 md:space-y-0">
@@ -156,28 +149,28 @@ const StoneAndStoryPage = () => {
               <p>
                 We studied the Roman bathhouse’s original function, layout, and
                 sequence of spaces from the changing room through cold,
-                lukewarm, and hot rooms supported by an underfloor heating
-                system. Today, the bathhouse is divided into separate spaces
-                with individual entrances, and the original connections are
-                closed. To understand the history of the building, we collected
-                visual documents from 1890 to the present and analyzed original
+                lukewarm, and hot rooms supported by hypocaust, an underfloor
+                heating system. Today, the bathhouse is divided into separate
+                spaces (restaurant, shop, and unused space) with individual
+                entrances, and the original connections between the spaces are
+                closed. To understand the building's history, we collected
+                visual records from 1890 to the present and analyzed original
                 versus added stones, aiming to preserve the authentic structure
                 while removing later interventions.
               </p>
               <p className="mt-4">
-                Our proposal envisions a public library that reconnects the
-                people of Nazareth with their cultural and historical heritage.
-                We sought to preserve the bathhouse’s original spatial logic,
-                the sequence of hot, lukewarm, and cold rooms, and reimagined it
-                as a narrative structure within the new program.
+                In our proposal, we sought to preserve the bathhouse’s original
+                spatial logic, the sequence of hot, lukewarm, and cold rooms,
+                and re-imagined it as a narrative structure within the new
+                program.
               </p>
             </div>
             <img
               src={project.designs[0]}
-              className="oject-cover rounded-lg mx-auto"
+              className="object-contains rounded-lg mx-auto w-full"
             />
           </div>
-          <div className="grid lg:grid-cols-7 max-w-5xl mx-auto md:grid-cols-4 grid-cols-2 mt-10 gap-4">
+          <div className="grid lg:grid-cols-9  mx-auto md:grid-cols-4 grid-cols-2 mt-10 gap-4">
             <div className="mx-auto">
               <img
                 src={project.designs[1]}
@@ -226,6 +219,11 @@ const StoneAndStoryPage = () => {
                 className="w-48 h-48 object-cover"
               />
               <p className="text-center">1940</p>
+            </div>
+
+            <div className="mx-auto col-span-2">
+              <img src={project.designs[18]} className="h-48 object-cover" />
+              <p className="text-center">2025</p>
             </div>
           </div>
 
@@ -323,12 +321,22 @@ const StoneAndStoryPage = () => {
               floors.
             </p>
           </div>
-          <div className="mt-10 flex flex-col justify-center max-w-5xl mx-auto">
+          <div className="mt-10 flex flex-col justify-center max-w-8xl mx-auto">
             <img src={project.designs[14]} className="rounded-lg" />
             <img src={project.designs[15]} className="rounded-lg" />
-            <div className="grid grid-cols-2 mt-4">
+            <div className="grid grid-cols-2">
               <img src={project.designs[16]} className="rounded-lg" />
               <img src={project.designs[17]} className="rounded-lg" />
+            </div>
+            <div className="grid grid-cols-2 gap-2">
+              <img
+                src={project.designs[19]}
+                className="object-contain rounded-lg"
+              />
+              <img
+                src={project.designs[20]}
+                className="object-contain rounded-lg"
+              />
             </div>
           </div>
         </div>
@@ -352,12 +360,12 @@ const StoneAndStoryPage = () => {
               <div className="space-y-2">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-3 md:gap-4">
                   <img
-                    src={project.renders[0]}
+                    src={project.renders[1]}
                     alt={`${project.title} Render 1`}
                     className="w-full h-[500px] sm:h-48 md:h-[500px] object-cover rounded-lg"
                   />
                   <img
-                    src={project.renders[1]}
+                    src={project.renders[0]}
                     alt={`${project.title} Render 2`}
                     className="w-full h-[500px] sm:h-48 md:h-[500px] object-cover rounded-lg"
                   />
@@ -394,29 +402,6 @@ const StoneAndStoryPage = () => {
             alt={`${project.title} Physical Model 1`}
             className="w-full object-cover rounded-lg"
           />
-
-          <div className="py-10 flex justify-center">
-            <a
-              href="/story-and-stone-detailed.pdf"
-              download="story-and-stone-detailed.pdf"
-              className="inline-flex items-center gap-2 px-6 py-3 bg-accent text-white font-semibold rounded-lg hover:bg-accent/90 transition-colors shadow-md"
-            >
-              <svg
-                className="w-5 h-5"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"
-                />
-              </svg>
-              Download Detailed Project
-            </a>
-          </div>
         </div>
         <div className="pt-16" id="end">
           <ProjectFooter currentSlug={project.slug} />
