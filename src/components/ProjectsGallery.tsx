@@ -44,7 +44,7 @@ const ProjectsGallery = () => {
             >
               <Link
                 to={`/${project.slug}`}
-                className="project-card cursor-pointer bg-background rounded-2xl overflow-hidden block hover:shadow-lg transition-all duration-200"
+                className="h-full project-card cursor-pointer bg-background rounded-2xl overflow-hidden block hover:shadow-lg transition-all duration-200"
               >
                 <div className="relative overflow-hidden">
                   <img
@@ -69,11 +69,11 @@ const ProjectsGallery = () => {
                   <h3 className="font-serif text-2xl font-semibold text-primary mb-3">
                     {project.title}
                   </h3>
-                  <p className="text-muted-foreground leading-relaxed">
+                  <div className="text-muted-foreground leading-relaxed">
                     {project.points.map((point, idx) => (
-                      <div key={idx}>{point}</div>
+                      <p key={idx}>{point}</p>
                     ))}
-                  </p>
+                  </div>
                 </div>
               </Link>
             </motion.div>
