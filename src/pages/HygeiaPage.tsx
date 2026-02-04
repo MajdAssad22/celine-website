@@ -95,20 +95,32 @@ const HygeiaPage = () => {
           </div>
         </div>
         <div id="research" className="pt-10">
-          <h2 className="text-2xl font-bold font-serif mb-4">Research</h2>
-          <p>
-            This project emerged from a growing awareness of how living
-            environments influence both physical and emotional well-being. We
-            were inspired by the belief that the kitchen, as the heart of the
-            home, should actively support healthier and more balanced
-            lifestyles. This led us to explore the concept in depth, focusing on
-            the multiple dimensions of hygiene and well-being. Alongside this,
-            we examined the historical evolution of the kitchen, including early
-            20th-century visions of the ‘future kitchen’ and the development of
-            kitchen design over time. This research highlighted the importance
-            of efficiency and adaptability, which ultimately formed the
-            foundation of the project.
-          </p>
+          <div className="grid grid-cols-2 gap-8">
+            <div>
+              <h2 className="text-2xl font-bold font-serif mb-4">Research</h2>
+              <p>
+                This project emerged from a growing awareness of how living
+                environments influence both physical and emotional well-being.
+                We were inspired by the belief that the kitchen, as the heart of
+                the home, should actively support healthier and more balanced
+                lifestyles. This led us to explore the concept in depth,
+                focusing on the multiple dimensions of hygiene and well-being.
+                Alongside this, we examined the historical evolution of the
+                kitchen, including early 20th-century visions of the ‘future
+                kitchen’ and the development of kitchen design over time. This
+                research highlighted the importance of efficiency and
+                adaptability, which ultimately formed the foundation of the
+                project.
+              </p>
+            </div>
+            <div>
+              <img
+                src={project.researchImages[0]}
+                alt="research image"
+                className="object-contain w-3/4 mx-auto"
+              />
+            </div>
+          </div>
         </div>
         <div id="design" className="pt-10">
           <h2 className="text-2xl font-bold font-serif mb-4">Design</h2>
