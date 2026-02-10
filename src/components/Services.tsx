@@ -1,42 +1,49 @@
-import { Home, Palette, Lightbulb, Sofa, Layout, Sparkles } from "lucide-react";
+import {
+  Home,
+  Palette,
+  Lightbulb,
+  Sofa,
+  Layout,
+  Sparkles,
+  ChevronRight,
+} from "lucide-react";
+import {
+  Dialog,
+  DialogTrigger,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+} from "@/components/ui/dialog";
+import MasonryGallery from "@/components/MasonryGallery";
+
+import colorConsultation1 from "@/assets/services/color-consultation/color-consultation-1.jpeg";
 
 const Services = () => {
   const services = [
     {
       icon: Layout,
       title: "Space Planning",
-      description:
-        "Optimizing your space for both functionality and flow, ensuring every square foot serves a purpose.",
     },
     {
       icon: Palette,
       title: "Color Consultation",
-      description:
-        "Expert color selection that enhances your space's mood and reflects your personal style.",
+      images: [colorConsultation1],
     },
     {
       icon: Sofa,
       title: "Furniture Selection & Design",
-      description:
-        "Curating or designing the perfect pieces that combine style, comfort, and quality.",
     },
     {
       icon: Lightbulb,
-      title: "Lighting Design",
-      description:
-        "Creating layered lighting solutions that enhance ambiance and highlight your space's best features.",
+      title: "Lighting Selection & Design",
     },
     {
       icon: Home,
       title: "Full Home Design",
-      description:
-        "Complete interior design services from concept to completion for your entire home.",
     },
     {
       icon: Sparkles,
       title: "Styling & Staging",
-      description:
-        "Professional styling services that bring your space to life with carefully chosen accessories.",
     },
   ];
 
@@ -55,22 +62,45 @@ const Services = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service, index) => (
-            <div
-              key={index}
-              className="project-card bg-background p-8 rounded-2xl"
-            >
-              <div className="flex items-center justify-center w-16 h-16 bg-sage/10 rounded-xl mb-6">
-                <service.icon className="h-8 w-8 text-sage" />
-              </div>
+            <Dialog key={index}>
+              <DialogTrigger asChild>
+                <button
+                  type="button"
+                  aria-label={`Open ${service.title} details`}
+                  className="group project-card bg-background p-8 rounded-2xl text-center hover:shadow-lg transform transition-transform hover:-translate-y-1 cursor-pointer hover:bg-sage/5 focus:outline-none focus-visible:ring-2 focus-visible:ring-sage/50"
+                >
+                  <div className="flex items-center justify-center w-20 h-20 bg-sage/10 rounded-xl mb-6 mx-auto">
+                    <service.icon className="h-10 w-10 text-sage" />
+                  </div>
 
-              <h3 className="font-serif text-xl font-semibold text-primary mb-4">
-                {service.title}
-              </h3>
+                  <div className="inline-flex items-center justify-center">
+                    <h3 className="font-serif text-lg md:text-xl font-semibold text-primary inline">
+                      {service.title}
+                    </h3>
+                  </div>
 
-              <p className="text-muted-foreground leading-relaxed">
-                {service.description}
-              </p>
-            </div>
+                  <span className="text-sm text-muted-foreground opacity-80 mt-2 flex items-center justify-center gap-2">
+                    View
+                    <ChevronRight className="h-4 w-4 text-sage opacity-80 transform transition-transform group-hover:translate-x-1" />
+                  </span>
+                </button>
+              </DialogTrigger>
+
+              <DialogContent>
+                <DialogHeader>
+                  <DialogTitle>{service.title}</DialogTitle>
+                </DialogHeader>
+
+                {service.images && service.images.length > 0 && (
+                  <div className="mt-4">
+                    <MasonryGallery
+                      images={service.images}
+                      title={service.title}
+                    />
+                  </div>
+                )}
+              </DialogContent>
+            </Dialog>
           ))}
         </div>
       </div>

@@ -47,6 +47,20 @@ const MasonryGallery: React.FC<MasonryGalleryProps> = ({
     loadImageDimensions();
   }, [images]);
 
+  // If there's only one image, show it prominently (full-width within container)
+  if (images.length === 1) {
+    return (
+      <div className="w-full flex items-center justify-center">
+        <img
+          src={images[0]}
+          alt={alt}
+          loading="lazy"
+          className="w-full max-h-[80vh] rounded-lg object-contain"
+        />
+      </div>
+    );
+  }
+
   // Sort images by aspect ratio to create a more balanced layout
   const sortedIndices = images
     .map((_, idx) => idx)
