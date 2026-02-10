@@ -17,15 +17,7 @@ const StoneAndStoryPage = () => {
 
   // Scroll spy logic
   const [activeSection, setActiveSection] = useState("concept");
-  const sectionIds = [
-    "concept",
-    "research",
-    "design",
-    "materials",
-    "renders",
-    "model",
-    "end",
-  ];
+  const sectionIds = ["concept", "research", "design", "renders", "end"];
 
   useEffect(() => {
     const handleScroll = () => {
@@ -133,20 +125,7 @@ const StoneAndStoryPage = () => {
                 to avoid religious sites and establish a space that reconnects
                 locals with the city’s rich historical layers.
               </p>
-            </div>
-
-            <img
-              src={project.researchImages[0]}
-              className="h-auto object-contain w-full"
-              alt="research image"
-            />
-          </div>
-        </div>
-        <div id="design" className="pt-10">
-          <div className="md:grid md:grid-cols-2 gap-4 space-y-10 md:space-y-0">
-            <div>
-              <h2 className="text-2xl font-bold font-serif mb-4">Design</h2>
-              <p>
+              <p className="mt-4">
                 We studied the Roman bathhouse’s original function, layout, and
                 sequence of spaces from the changing room through cold,
                 lukewarm, and hot rooms supported by hypocaust, an underfloor
@@ -165,10 +144,18 @@ const StoneAndStoryPage = () => {
                 program.
               </p>
             </div>
-            <img
-              src={project.designs[0]}
-              className="object-contains rounded-lg mx-auto w-full"
-            />
+
+            <div className="flex flex-col gap-4 items-center">
+              <img
+                src={project.researchImages[0]}
+                className="h-auto object-contain w-4/5  rounded-lg"
+                alt="research image"
+              />
+              <img
+                src={project.designs[0]}
+                className="object-contains rounded-lg mx-auto w-full"
+              />
+            </div>
           </div>
           <div className="grid lg:grid-cols-9  mx-auto md:grid-cols-4 grid-cols-2 mt-10 gap-4">
             <div className="mx-auto">
@@ -226,9 +213,11 @@ const StoneAndStoryPage = () => {
               <p className="text-center">2025</p>
             </div>
           </div>
-
+        </div>
+        <div id="design" className="pt-10">
           <div className="md:grid md:grid-cols-2 gap-4 space-y-10 mt-10 md:space-y-0">
             <div>
+              <h2 className="text-2xl font-bold font-serif mb-4">Design</h2>
               <p>
                 The design starts with a coffee shop, preserved as part of
                 locals’ daily routine, and transitions through a mini museum
@@ -339,19 +328,11 @@ const StoneAndStoryPage = () => {
               />
             </div>
           </div>
-        </div>
-        <div id="materials" className="pt-10">
-          <h2 className="text-2xl font-bold font-serif mb-10">Materials</h2>
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mt-5">
-            {project.materials.map((material, idx) => (
-              <img
-                key={idx}
-                src={material}
-                alt={`${project.title} Material ${idx + 1}`}
-                className="w-full h-auto object-cover rounded-lg"
-              />
-            ))}
-          </div>
+          <img
+            src={project.physicalModels[0]}
+            alt={`${project.title} Physical Model 1`}
+            className="w-full object-cover rounded-lg"
+          />
         </div>
         <div id="renders" className="pt-10">
           <h2 className="text-2xl font-bold font-serif mb-4">Renders</h2>
@@ -393,15 +374,20 @@ const StoneAndStoryPage = () => {
                 </h3>
               </div>
             </div>
+
+            <div className="pt-10">
+              <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mt-5">
+                {project.materials.map((material, idx) => (
+                  <img
+                    key={idx}
+                    src={material}
+                    alt={`${project.title} Material ${idx + 1}`}
+                    className="w-full h-auto object-cover rounded-lg"
+                  />
+                ))}
+              </div>
+            </div>
           </div>
-        </div>
-        <div id="model" className="pt-10">
-          <h2 className="text-2xl font-bold font-serif mb-4">Physical Model</h2>
-          <img
-            src={project.physicalModels[0]}
-            alt={`${project.title} Physical Model 1`}
-            className="w-full object-cover rounded-lg"
-          />
         </div>
         <div className="pt-16" id="end">
           <ProjectFooter currentSlug={project.slug} />

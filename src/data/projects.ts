@@ -1,5 +1,6 @@
 // Store & Story imports
 import storyAndStoneThumbnail from "@/assets/story-and-stone/story-and-stone-thumbnail.png";
+import storyAndStoneBanner from "@/assets/story-and-stone/story-and-stone-banner.jpeg";
 
 import storyAndStoneDesign1 from "@/assets/story-and-stone/designs/story-and-stone-design-1.jpeg";
 import storyAndStoneDesign2 from "@/assets/story-and-stone/designs/story-and-stone-design-2.jpeg";
@@ -88,8 +89,8 @@ import hygeiaDesign8 from "@/assets/hygeia/designs/hygeia-design-8.jpg";
 import hygeiaDesign9 from "@/assets/hygeia/designs/hygeia-design-9.jpg";
 import hygeiaDesign10 from "@/assets/hygeia/designs/hygeia-design-10.jpg";
 import hygeiaDesign11 from "@/assets/hygeia/designs/hygeia-design-11.jpg";
-import hygeiaDesign12 from "@/assets/hygeia/designs/hygeia-design-12.jpg";
-import hygeiaDesign13 from "@/assets/hygeia/designs/hygeia-design-13.jpg";
+import hygeiaDesign12 from "@/assets/hygeia/designs/hygeia-design-12.jpeg";
+import hygeiaDesign13 from "@/assets/hygeia/designs/hygeia-design-13.jpeg";
 
 import hygeiaModel1 from "@/assets/hygeia/physical-models/hygeia-model-1.jpeg";
 import hygeiaModel2 from "@/assets/hygeia/physical-models/hygeia-model-2.jpeg";
@@ -120,15 +121,9 @@ export const projects = [
     category: "Interior",
     awardWinning: false,
     points: ["Culture - History", "Conservation", "Archeology", "Community"],
-    concepts: [
-      "Community",
-      "Daily Use",
-      "Archeology",
-      "Cultural Center",
-      "Heritage",
-    ],
+    concepts: ["Community", "Daily Use", "Archeology", "Cultural Center"],
     thumbnail: storyAndStoneThumbnail,
-    banner: storyAndStoneRender1,
+    banner: storyAndStoneBanner,
     researchImages: [stoneAndStoryResearch1],
     renders: [
       storyAndStoneRender1,
