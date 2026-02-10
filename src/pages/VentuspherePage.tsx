@@ -18,15 +18,7 @@ const VentuspherePage = () => {
 
   // Scroll spy logic
   const [activeSection, setActiveSection] = useState("concept");
-  const sectionIds = [
-    "concept",
-    "research",
-    "design",
-    "materials",
-    "renders",
-    "model",
-    "end",
-  ];
+  const sectionIds = ["concept", "research", "design", "renders", "end"];
 
   useEffect(() => {
     const handleScroll = () => {
@@ -318,18 +310,12 @@ const VentuspherePage = () => {
             <img src={project.designs[11]} className="object-contain w-full" />
             <img src={project.designs[12]} className="object-contain w-full" />
           </div>
-        </div>
-        <div id="materials" className="pt-10">
-          <h2 className="text-2xl font-bold font-serif mb-10">Materials</h2>
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mt-5">
-            {project.materials.map((material, idx) => (
-              <img
-                key={idx}
-                src={material}
-                alt={`${project.title} Material ${idx + 1}`}
-                className="w-full h-auto object-cover rounded-lg"
-              />
-            ))}
+          <div className="flex justify-center pt-5">
+            <img
+              src={project.physicalModels[0]}
+              alt={`${project.title} Physical Model 1`}
+              className="w-8/12 object-cover  rounded-lg"
+            />
           </div>
         </div>
         <div id="renders" className="pt-10">
@@ -359,16 +345,19 @@ const VentuspherePage = () => {
               />
             </div>
           </div>
+
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mt-5">
+            {project.materials.map((material, idx) => (
+              <img
+                key={idx}
+                src={material}
+                alt={`${project.title} Material ${idx + 1}`}
+                className="w-full h-auto object-cover rounded-lg"
+              />
+            ))}
+          </div>
         </div>
-        <div id="model" className="pt-10">
-          <h2 className="text-2xl font-bold font-serif mb-4">Physical Model</h2>
-          <img
-            src={project.physicalModels[0]}
-            alt={`${project.title} Physical Model 1`}
-            className="w-full object-cover rounded-lg"
-          />
-        </div>
-        <div id="end">
+        <div className="pt-16" id="end">
           <ProjectFooter currentSlug={project.slug} />
         </div>
       </div>
