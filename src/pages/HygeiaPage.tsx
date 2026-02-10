@@ -21,7 +21,6 @@ const HygeiaPage = () => {
     "concept",
     "research",
     "design",
-    "materials",
     "renders",
     "model",
     "end",
