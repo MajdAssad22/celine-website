@@ -10,7 +10,6 @@ const sections = [
   { label: "Concept", id: "concept" },
   { label: "Research", id: "research" },
   { label: "Design", id: "design" },
-  { label: "Materials", id: "materials" },
   { label: "Renders", id: "renders" },
   { label: "Model", id: "model" },
 ];
