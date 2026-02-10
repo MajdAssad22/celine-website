@@ -62,6 +62,7 @@ const HygeiaPage = () => {
       </section>
 
       <ProjectNavigation
+        sectionIds={sectionIds}
         activeSection={activeSection}
         onSectionClick={(id) => {
           const el = document.getElementById(id);

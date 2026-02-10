@@ -54,6 +54,7 @@ const StoneAndStoryPage = () => {
       </section>
 
       <ProjectNavigation
+        sectionIds={sectionIds}
         activeSection={activeSection}
         onSectionClick={(id) => {
           const el = document.getElementById(id);
@@ -128,7 +129,7 @@ const StoneAndStoryPage = () => {
               <p className="mt-4">
                 We studied the Roman bathhouse’s original function, layout, and
                 sequence of spaces from the changing room through cold,
-                lukewarm, and hot rooms supported by hypocaust, an underfloor
+                lukewarm, and hot rooms supported by hypocaust; an underfloor
                 heating system. Today, the bathhouse is divided into separate
                 spaces (restaurant, shop, and unused space) with individual
                 entrances, and the original connections between the spaces are

@@ -56,6 +56,7 @@ const VentuspherePage = () => {
       </section>
 
       <ProjectNavigation
+        sectionIds={sectionIds}
         activeSection={activeSection}
         onSectionClick={(id) => {
           const el = document.getElementById(id);
@@ -140,13 +141,15 @@ const VentuspherePage = () => {
                 there or working outside the apartment, we made the room and
                 furniture to fit his work and tools, and also the fact that he
                 smokes to help direct the smoke outside.
+                <br />
+                N = roommate 1 <br /> Y = roommate 2
               </p>
             </div>
             <div className="lg:col-span-6 lg:row-span-2 w-full lg:w-5/6">
               <ZoomImage
                 src={project.designs[2]}
                 alt="Design image"
-                containerClassName="w-full lg:w-5/6"
+                containerClassName="w-full"
                 className="object-cover rounded-lg"
                 zoomLevel={4}
                 magnifierSize={120}

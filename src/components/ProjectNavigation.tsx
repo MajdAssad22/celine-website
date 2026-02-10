@@ -2,22 +2,21 @@ import { CheckIcon } from "lucide-react";
 import React from "react";
 
 interface ProjectNavMenuProps {
+  sectionIds: string[];
   onSectionClick?: (section: string) => void;
   activeSection?: string;
 }
 
-const sections = [
-  { label: "Concept", id: "concept" },
-  { label: "Research", id: "research" },
-  { label: "Design", id: "design" },
-  { label: "Renders", id: "renders" },
-  { label: "Model", id: "model" },
-];
-
 const ProjectNavigation: React.FC<ProjectNavMenuProps> = ({
+  sectionIds,
   onSectionClick,
   activeSection,
 }) => {
+  const sections = sectionIds.slice(0, sectionIds.length - 1).map((id) => ({
+    id,
+    label: id.charAt(0).toUpperCase() + id.slice(1), // Capitalize first letter
+  }));
+
   let activeIdx = sections.findIndex((s) => s.id === activeSection);
   if (activeSection === "end") {
     activeIdx = sections.length + 1;
